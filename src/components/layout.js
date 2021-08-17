@@ -26,10 +26,24 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <section 
+        style={{
+          marginTop:"2.6em",
+          height:"7em",
+          display: "flex",
+          alignItems: "center",
+          justifyContent:"center",
+          backgroundColor:"#2d2d2d",
+          color:"white",
+          textAlign:"center",
+          marginBottom:"1.5em"
+        }}
+      >
+        <h2 style={{ margin:"0px", textAlign:"center"}} > Senior frontend developer - trying to be a javascript ninja</h2>
+      </section>
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
         }}
       >

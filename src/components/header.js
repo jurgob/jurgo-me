@@ -5,18 +5,20 @@ import { Link } from "gatsby"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#202020`,
       marginBottom: `1.45rem`,
+      position:"absolute",
+      top:"0px",
+      width:"100%"
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `0.5em`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0, fontSize:"1.5em",fontWeight:"500" }}>
         <Link
           to="/"
           style={{
