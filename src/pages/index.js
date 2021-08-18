@@ -92,7 +92,7 @@ const IndexPage = () => (
         
         <Section title="Resume" >
         <ResumeLine  
-            title={<F>Node.js API developer at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
+            title={<F>Team Leader at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" Jannuary 2018"
             end="Present"
             desc={<F>I was Promoted Tecnical Team leader in order to lead the  <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  Team and the  <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ).</F>}
