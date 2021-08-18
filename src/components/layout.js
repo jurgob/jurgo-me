@@ -26,37 +26,39 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div style={{backgroundColor:"#f9f9f9"}} >
       <section 
         style={{
-          marginTop:"2.6em",
-          height:"7em",
+          marginTop:"2.9em",
+          height:"9em",
           display: "flex",
           alignItems: "center",
           justifyContent:"center",
           backgroundColor:"#2d2d2d",
           color:"white",
           textAlign:"center",
-          marginBottom:"1.5em"
+          marginBottom:"1.5em",
         }}
       >
-        <h2 style={{ margin:"0px", textAlign:"center"}} > Senior frontend developer - trying to be a javascript ninja</h2>
+        <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript ninja. Trying to be ...  <span style={{fontSize:"0.85em"}} >//TODO</span></h2>
       </section>
       <div
         style={{
           margin: `0 auto`,
           padding: `0 1.0875rem 1.45rem`,
+          maxWidth: "980px"
         }}
       >
         <main>{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
+            fontSize:"0.8em"
           }}
         >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          Updated on August, 2021
         </footer>
+      </div>
       </div>
     </>
   )
