@@ -86,7 +86,7 @@ const IndexPage = () => (
             <P>Back then I was very interested in <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
             <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" >progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
             Cross browser Approach was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).</P>
-            <P>I spent my last 5 years mainly developing with javascript, but in my "past live" I did some experience with Java and Python.</P>
+            <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P>
           </F>
         </Section>
         
