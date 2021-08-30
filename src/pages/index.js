@@ -57,17 +57,24 @@ const PageContent = ({children}) => (<div style={{fontSize:"0.9em"}} > {children
 const Socials = () => {
   
   const linkStyle = {
-    marginLeft: "5px"
+    marginRight: "12px",
+    display:"inline-block",
+    
+  }
+  
+  const imgStyle = {
+    borderRadius: "6px"
   }
 
   return (
-    <p>
-       <a style={linkStyle} href="https://github.com/jurgob" ><StaticImage src="../images/github_icon.png" alt="." /></a>
-       <a style={linkStyle} href="https://uk.linkedin.com/in/jurgo" ><StaticImage src="../images/linkedin_icon.png" alt="." /></a>
-       <a style={linkStyle} href="https://twitter.com/UselessClown" ><StaticImage src="../images/twitter_icon.jpeg" alt="." /></a>
-       <a style={linkStyle} href="https://www.hackerearth.com/users/jurgo.boemo/" ><StaticImage src="../images/hackerrank_icon.png" alt="." /></a>
-       <a style={linkStyle} href="https://www.facebook.com/jurgo.boemo" ><StaticImage src="../images/facebook_icon.png" alt="." /></a>
-
+    <p  style={{marginTop:"4px"}}>
+       <a style={linkStyle} href="https://github.com/jurgob" ><StaticImage style={imgStyle} width="40" height="40" src="../images/github_icon.png" alt="." /></a>
+       <a style={linkStyle} href="https://uk.linkedin.com/in/jurgo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/linkedin_icon.png" alt="." /></a>
+       <a style={linkStyle} href="https://twitter.com/UselessClown" ><StaticImage style={imgStyle} width="40" height="40" src="../images/twitter_icon.png" alt="." /></a>
+       <a style={linkStyle} href="https://www.hackerearth.com/users/jurgo.boemo/" ><StaticImage style={imgStyle} width="40" height="40"  src="../images/hackerearth_icon.png" alt="." /></a>
+       <a style={linkStyle} href="https://www.hackerrank.com/jurgo" ><StaticImage style={imgStyle} width="40" height="40"  src="../images/hackerrank_icon.jpg" alt="." /></a>
+       <a style={linkStyle} href="https://www.facebook.com/jurgo.boemo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/facebook_icon.png" alt="." /></a>
+       <a style={linkStyle} href="https://medium.com/@jurgo.boemo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/medium_icon.png" alt="." /></a>
     </p>
   )
 }
