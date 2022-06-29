@@ -72,7 +72,7 @@ const Socials = () => {
        <a style={linkStyle} href="https://uk.linkedin.com/in/jurgo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/linkedin_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://twitter.com/UselessClown" ><StaticImage style={imgStyle} width="40" height="40" src="../images/twitter_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://www.hackerearth.com/users/jurgo.boemo/" ><StaticImage style={imgStyle} width="40" height="40"  src="../images/hackerearth_icon.png" alt="." /></a>
-       <a style={linkStyle} href="https://www.hackerrank.com/jurgo" ><StaticImage style={imgStyle} width="40" height="40"  src="../images/hackerrank_icon.jpg" alt="." /></a>
+       <a style={linkStyle} href="https://www.hackerrank.com/jurgo" ><StaticImage style={imgStyle} width="40" height="40"  src="../images/hackerrank_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://www.facebook.com/jurgo.boemo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/facebook_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://medium.com/@jurgo.boemo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/medium_icon.png" alt="." /></a>
     </p>
