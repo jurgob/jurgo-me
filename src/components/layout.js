@@ -12,6 +12,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+const HeadLink = ({href, children}) => <a style={{color:"white"}}  href={href} >{children}</a>
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -30,7 +32,7 @@ const Layout = ({ children }) => {
       <section 
         style={{
           marginTop:"2.9em",
-          height:"9em",
+          height:"10em",
           display: "flex",
           alignItems: "center",
           justifyContent:"center",
@@ -40,7 +42,12 @@ const Layout = ({ children }) => {
           marginBottom:"1.5em",
         }}
       >
-        <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript ninja. Trying to be ...  <span style={{fontSize:"0.85em"}} >//TODO</span></h2>
+        <section style={{paddingTop: "2em"}}>
+          <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript ninja. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
+TODO</span></span></h2>
+
+          <p style={{paddingTop: "1.5em"}} > <HeadLink href="https://casual-programming.com/" >Blog</HeadLink> | <HeadLink href="https://github.com/jurgob" >Github</HeadLink></p>
+        </section>
       </section>
       <div
         style={{
