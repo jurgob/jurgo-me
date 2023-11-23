@@ -149,9 +149,11 @@ const IndexPage = () => (
           />
         </Section>
         <Section title="My Projects" >
-        
           <ProjectLine title="Conversation API functions" href="https://github.com/jurgob/conversation-api-function" >
             <F>A cli tool that will allow you to write simple application for the Vonage <A href="https://developer.nexmo.com/conversation">Conversation API</A> in your local env with minimal configuration. (I wrote an article about it <A href="https://casual-programming.com/an-easy-way-to-try-vonage-communication-api-locally/">here</A>) </F>
+          </ProjectLine>
+          <ProjectLine title="Conversation API Next.js Demo app monorepo" href="https://github.com/Vonage-Community/reference-client_sdk-ios-android-js-node-deno-usecases" >
+            <F>A Turborepo-powered monorepo showcasing the Conversation API's capabilities through practical examples.</F>
           </ProjectLine>
           <ProjectLine title="JSQuest" href="https://jsquest.herokuapp.com/" >
             <F>An interactive way to learn js. Check the (very old) <A href="https://github.com/jurgob/js_questions">code</A> or <A  href="https://casual-programming.com/an_interactive_way_to_learn_javascript_jsquest/" >read about it</A> </F>
