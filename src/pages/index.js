@@ -155,7 +155,7 @@ const IndexPage = () => (
           <ProjectLine title="Conversation API Next.js Demo app monorepo" href="https://github.com/Vonage-Community/reference-client_sdk-ios-android-js-node-deno-usecases" >
             <F>A Turborepo-powered monorepo showcasing the Conversation API's capabilities through practical examples.</F>
           </ProjectLine>
-          <ProjectLine title="JSQuest" href="https://jsquest.herokuapp.com/" >
+          <ProjectLine title="JSQuest" href="https://jsquest.io/" >
             <F>An interactive way to learn js. Check the (very old) <A href="https://github.com/jurgob/js_questions">code</A> or <A  href="https://casual-programming.com/an_interactive_way_to_learn_javascript_jsquest/" >read about it</A> </F>
           </ProjectLine>
           <ProjectLine title="CityClub.tv" href="http://www.cityclub.tv/" >
