@@ -4,14 +4,32 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+const SKILLS = {
+  JS : {name: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  NODE : {name: "Node.js", href: "https://nodejs.org/en/" },
+  COUCHBASE : {name: "Couchbase", href: "https://www.couchbase.com/" },
+  SOCKETIO: {name: "Socket.io", href: "https://socket.io/" },
+  REACT : {name: "React", href: "https://reactjs.org/" },
+  TS: {name: "Typescript", href: "https://www.typescriptlang.org/" },
+  TURBO: {name: "TurboRepo", href: "https://turbo.build/" },
+  NEXT: {name: "Next.js", href: "https://nextjs.org/" },
+  FLY: {name: "Fly.io", href: "https://fly.io/" },
+  OPENAIAPI: {name: "OpenAI API", href: "https://beta.openai.com/" },
+  GOOGLETTS: {name: "Google TTS", href: "https://cloud.google.com/text-to-speech" },
+  GOOGLEASR: {name: "Google ASR", href: "https://cloud.google.com/speech-to-text" },
+  CSS: {name: "CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  DISTRIBUTED: {name: "Distributed Systems", href: "https://en.wikipedia.org/wiki/Distributed_computing" },
+  WEBRTC: {name: "WebRTC", href: "https://webrtc.org/" },
+  JQUERY: {name: "Jquery", href: "https://jquery.com/" },
+}
 
-
-const A = ({href, children}) => {
+const A = ({href, children, style}) => {
   return (
     <a 
       style={{
         color:"#c05b4d",
-        textDecoration:"none"
+        textDecoration:"none", 
+        ...style
       }}
       href={href}
     >{children}</a>
@@ -38,11 +56,32 @@ const ResumeLine = ({title, desc, start, end})=> {
   )
 }
 
-const ProjectLine = ({title,href, children})=> {
+const addBetween = (arr, add) => {
+  const res = [];
+  arr.forEach((el, i) => {
+    res.push(el);
+    if (i < arr.length - 1) {
+      res.push(add);
+    }
+  });
+  return res;
+}
+
+const ProjectLine = ({title,href, children, skills})=> {
   return (
     <section style={{marginBottom:"0.5em"}} >
-        <h5 style={{margin:"0px"}} ><A href={href}>{title}</A></h5>
+        <h5 style={{margin:"0.8em 0 0.2em 0"}} ><A href={href}>{title}</A></h5>
         <P>{children}</P>
+        {skills && <div style={{margin:"0em", padding:"0em"}} >
+          <span style={{margin:"0px", paddingLeft:"0em"}} >
+            {addBetween(
+              skills.map(skill => <span style={{margin:"0px", padding:"0"}} ><A style={{ fontSize: "0.9em"}}  href={skill.href} >{skill.name}</A></span>),
+              <span style={{margin:"0px", padding:"0 0.5em", fontSize: "0.9em"}} >|</span>
+              )}
+          </span>
+        </div>
+        }
+          
       </section>
   )
 }
@@ -149,19 +188,16 @@ const IndexPage = () => (
           />
         </Section>
         <Section title="My Projects" >
-          <ProjectLine title="Conversation API functions" href="https://github.com/jurgob/conversation-api-function" >
+          <ProjectLine title="Conversation API functions" href="https://github.com/jurgob/conversation-api-function" skills={[SKILLS.JS, SKILLS.NODE]} >
             <F>A cli tool that will allow you to write simple application for the Vonage <A href="https://developer.nexmo.com/conversation">Conversation API</A> in your local env with minimal configuration. (I wrote an article about it <A href="https://casual-programming.com/an-easy-way-to-try-vonage-communication-api-locally/">here</A>) </F>
           </ProjectLine>
-          <ProjectLine title="Conversation API Next.js Demo app monorepo" href="https://github.com/Vonage-Community/reference-client_sdk-ios-android-js-node-deno-usecases" >
-            <F>A Turborepo-powered monorepo showcasing the Conversation API's capabilities through practical examples.</F>
-          </ProjectLine>
-          <ProjectLine title="JSQuest" href="https://jsquest.io/" >
+          <ProjectLine title="JSQuest" href="https://jsquest.io/" skills={[SKILLS.JS, SKILLS.REACT]} >
             <F>An interactive way to learn js. Check the (very old) <A href="https://github.com/jurgob/js_questions">code</A> or <A  href="https://casual-programming.com/an_interactive_way_to_learn_javascript_jsquest/" >read about it</A> </F>
           </ProjectLine>
-          <ProjectLine title="CityClub.tv" href="http://www.cityclub.tv/" >
+          <ProjectLine title="CityClub.tv" href="http://www.cityclub.tv/" skills={[SKILLS.JS, SKILLS.NODE]} >
             <F>Geolocated Chat writed with nodejs + Angularjs + socket.io. It works only on <A href="https://en.wikipedia.org/wiki/Udine" >Udine</A></F>
           </ProjectLine>
-          <ProjectLine title="ImagesLazyLoading" href="https://github.com/jurgob/ImagesLazyLoading" >
+          <ProjectLine title="ImagesLazyLoading" href="https://github.com/jurgob/ImagesLazyLoading" skills={[SKILLS.JS]} >
             <F>ImageLoader writed with commonjs+jquery+Promise</F>
           </ProjectLine>
           <ProjectLine title="Win Mover Standalone" href="https://github.com/jurgob/win_mover_standalone" >
@@ -170,19 +206,43 @@ const IndexPage = () => (
         </Section>
         
         <Section title="Projects I've Contributed To" >
-          <ProjectLine title="Conversation API" href="https://developer.nexmo.com/api/conversation" >
+          <ProjectLine title="Conversation API" href="https://developer.nexmo.com/api/conversation" 
+            skills={[SKILLS.JS,SKILLS.NODE, SKILLS.COUCHBASE, SKILLS.SOCKETIO, SKILLS.DISTRIBUTED, SKILLS.WEBRTC]} 
+          >
             <F>The Conversation API enables you to build conversation features where communication can take place across multiple mediums including IP Messaging, PSTN Voice, SMS and WebRTC Audio and Video.</F>
           </ProjectLine>
-          <ProjectLine title="Cliend SDK JS" href="https://developer.nexmo.com/sdk/stitch/javascript/index" >
+          <ProjectLine title="Client SDK JS" href="https://developer.nexmo.com/sdk/stitch/javascript/index" 
+            skills={[SKILLS.TS, SKILLS.SOCKETIO, SKILLS.WEBRTC]} 
+          >
             <F>Vonage Client SDK allows you to build Programmable Conversation applications.</F>
           </ProjectLine>
-          <ProjectLine title="Itmediaonline" href="http://www.itmediaonline.com/" >
+          <ProjectLine title="A Contact Center example app" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/contact-center" 
+            skills={[SKILLS.TS, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO]} 
+          >
+            <F>An example of how to implement a very simple contact center. Customer would interract with it via SMS or facebook page, agents would respond using the browser</F>
+          </ProjectLine>
+          <ProjectLine title="A Multichannel chat app" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/multichannel-app" 
+            skills={[SKILLS.TS, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO, SKILLS.GOOGLEASR, SKILLS.GOOGLETTS, SKILLS.OPENAIAPI, SKILLS.FLY]}
+          >
+            <F>A DYI slack like app, where you can use inapp voice, pstn voice, chat, facebook message, whatsapp and sms. You can also "talk" with openai </F>
+          </ProjectLine>
+          <ProjectLine title="Conversation API React SDK (experimental)" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" 
+            skills={[SKILLS.TS, SKILLS.REACT]}
+          >
+            <F>An experimenta Conversation API React SDK. It's a set of React widget and tools that allows customer to quickly Integrate chat and voice in their applications.</F>
+          </ProjectLine>
+          
+          <ProjectLine title="Itmediaonline" href="http://www.itmediaonline.com/"
+            skills={[SKILLS.JS, SKILLS.CSS,SKILLS.JQUERY]}
+           >
             <F>IT media online web site</F>
           </ProjectLine>
-          <ProjectLine title="Statravel Mobile Booking" href="http://m.statravel.com/mt/book.statravel.co.uk/" >
+          <ProjectLine title="Statravel Mobile Booking" href="http://m.statravel.com/mt/book.statravel.co.uk/" 
+          skills={[SKILLS.JS, SKILLS.CSS]}
+          >
             <F>Statravel Mobile Booking</F>
           </ProjectLine>
-          <ProjectLine title="Cadoo" href="https://github.com/digitalapesjam/Cadoo" >
+          <ProjectLine title="Cadoo" href="https://github.com/digitalapesjam/Cadoo"  skills={[SKILLS.JS]} >
             <F>Cadoo was a game we did in 48 hours of straight code at the <A href="https://en.wikipedia.org/wiki/Nordic_Game_Jam">Nordic Game Jam</A> 2014</F>
           </ProjectLine>
         </Section>
@@ -195,7 +255,6 @@ const IndexPage = () => (
         <Section title="Read / Write" >
           <P>I keep a tech blog called <A href="https://casual-programming.com/" >Casual Programming</A>.</P>
           <P>I also mantain a Tech Reading List of articles I found interesting here: <A href="https://jurgoboemo.tumblr.com/" >jurgoboemo.tumblr.com</A>   </P>
-          
         </Section>
 
         
