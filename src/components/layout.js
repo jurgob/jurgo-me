@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
         }}
       >
         <section style={{paddingTop: "2em"}}>
-          <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript ninja. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
+          <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript Dev. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
 TODO</span></span></h2>
 
           <p style={{paddingTop: "1.5em"}} > <HeadLink href="https://casual-programming.com/" >Blog</HeadLink> | <HeadLink href="https://github.com/jurgob" >Github</HeadLink></p>
