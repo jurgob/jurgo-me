@@ -614,4 +614,14 @@ pre tt:after {
   .header {      
     position: absolute;
   }
+
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
 }

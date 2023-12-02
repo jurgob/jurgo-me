@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           display: "flex",
           alignItems: "center",
           justifyContent:"center",
-          backgroundColor:"#2d2d2d",
+          backgroundColor:"#202020",
           color:"white",
           textAlign:"center",
           marginBottom:"1.5em",
