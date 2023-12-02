@@ -97,8 +97,7 @@ const Socials = () => {
   
   const linkStyle = {
     marginRight: "12px",
-    display:"inline-block",
-    
+    display:"inline-block", 
   }
   
   const imgStyle = {
@@ -106,7 +105,7 @@ const Socials = () => {
   }
 
   return (
-    <p  style={{marginTop:"4px"}}>
+    <p  style={{margin:"4px 0"}}>
        <a style={linkStyle} href="https://github.com/jurgob" ><StaticImage style={imgStyle} width="40" height="40" src="../images/github_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://uk.linkedin.com/in/jurgo" ><StaticImage style={imgStyle} width="40" height="40" src="../images/linkedin_icon.png" alt="." /></a>
        <a style={linkStyle} href="https://twitter.com/UselessClown" ><StaticImage style={imgStyle} width="40" height="40" src="../images/twitter_icon.png" alt="." /></a>
@@ -249,12 +248,11 @@ const IndexPage = () => (
           </ProjectLine>
         </Section>
         <Section title="Contact Me" >
-          <b>Mail:</b>
-          <P>jurgo.boemo at gmail.com</P>
+          <b>Mail:</b> <span>jurgo.boemo at gmail.com</span>
+          <br />
           <b>Socials</b>
           <Socials/>
-        </Section>
-        <Section title="Read / Write" >
+          <b>Read / Write</b>
           <P>I keep a tech blog called <A href="https://casual-programming.com/" >Casual Programming</A>.</P>
           <P>I also mantain a Tech Reading List of articles I found interesting here: <A href="https://jurgoboemo.tumblr.com/" >jurgoboemo.tumblr.com</A>   </P>
         </Section>

@@ -58,12 +58,9 @@ TODO</span></span></h2>
       >
         <main>{children}</main>
         <footer
-          style={{
-            marginTop: `2rem`,
-            fontSize:"0.8em"
-          }}
+        className="footer"
         >
-          Updated on August, 2021
+          Updated on December, 2023
         </footer>
       </div>
       </div>

@@ -610,6 +610,11 @@ pre tt:after {
   max-width: 980px      
 }
 
+.footer {
+  margin-top: 2rem;
+  font-size: 0.8em;          
+}
+
 @media print {
   .header {      
     position: absolute;
@@ -622,6 +627,10 @@ pre tt:after {
 
   p {
     font-size: 14px;
+  }
+
+  .footer {
+    display: none;
   }
 
 }
