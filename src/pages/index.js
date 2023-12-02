@@ -125,9 +125,10 @@ const IndexPage = () => (
       <PageContent>
         <Section title="About Me" >
           <F>
-            <P>I work mainly with javascript since 2010 and I've ended up to be a team leader few times.</P>
+            <P>I work mainly with Javascript/Typescript since 2010 and I've ended up to be a team leader few times.</P>
             <P>Since 2016 I'm working as a <A href="https://nodejs.org/en/" >Node.js</A> backender / team leader realizing the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A>.</P>
             <P>So now It's all about Rest API, using db's like <A href="https://www.couchbase.com/">Couchbase</A> and pretending to understand WebRTC. </P>
+            <P>A crucial aspect of the job is also to develop demo apps to demonstrate the potential of the Conversation API. We typically create them using <A href="https://reactjs.org/">React</A>.</P>
             <P>In my previous job I mainly work as a frontend developer, but I've worked also as backender (using javascript platforms).</P>
             <P>Back then I was very interested in <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
             <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" >progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
