@@ -595,3 +595,23 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.header {      
+  background: #202020;
+  margin-bottom: 1.45rem;
+  position: fixed;
+  top: 0px;
+  width: 100%;  
+}
+
+.header__inner {        
+  margin: 0 auto;
+  padding: 0.3em 0.5em 0.5em 0.5em;
+  max-width: 980px      
+}
+
+@media print {
+  .header {      
+    position: absolute;
+  }
+}
