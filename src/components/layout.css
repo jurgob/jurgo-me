@@ -633,4 +633,8 @@ pre tt:after {
     display: none;
   }
 
+  .break_inside_avoid {
+    break-inside: avoid;
+  }
+
 }

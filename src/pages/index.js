@@ -49,7 +49,7 @@ const Section = ({children, title}) => {
 
 const ResumeLine = ({title, desc, start, end})=> {
   return (
-    <section style={{marginBottom:"0.9em"}} >
+    <section style={{marginBottom:"0.9em"}} className="break_inside_avoid" >
         <h5 style={{margin:"0px", marginBottom:"0.3em"}} >{title} - {start}, {end}</h5>
         <P>{desc}</P>
       </section>
@@ -69,7 +69,7 @@ const addBetween = (arr, add) => {
 
 const ProjectLine = ({title,href, children, skills})=> {
   return (
-    <section style={{marginBottom:"0.5em"}} >
+    <section style={{marginBottom:"0.5em"}} className="break_inside_avoid" >
         <h5 style={{margin:"0.8em 0 0.2em 0"}} ><A href={href}>{title}</A></h5>
         <P>{children}</P>
         {skills && <div style={{margin:"0em", padding:"0em"}} >
@@ -195,9 +195,6 @@ const IndexPage = () => (
           <ProjectLine title="JSQuest" href="https://jsquest.io/" skills={[SKILLS.JS, SKILLS.REACT]} >
             <F>An interactive way to learn js. Check the (very old) <A href="https://github.com/jurgob/js_questions">code</A> or <A  href="https://casual-programming.com/an_interactive_way_to_learn_javascript_jsquest/" >read about it</A> </F>
           </ProjectLine>
-          <ProjectLine title="CityClub.tv" href="http://www.cityclub.tv/" skills={[SKILLS.JS, SKILLS.NODE]} >
-            <F>Geolocated Chat writed with nodejs + Angularjs + socket.io. It works only on <A href="https://en.wikipedia.org/wiki/Udine" >Udine</A></F>
-          </ProjectLine>
           <ProjectLine title="ImagesLazyLoading" href="https://github.com/jurgob/ImagesLazyLoading" skills={[SKILLS.JS]} >
             <F>ImageLoader writed with commonjs+jquery+Promise</F>
           </ProjectLine>
@@ -233,16 +230,6 @@ const IndexPage = () => (
             <F>An experimenta Conversation API React SDK. It's a set of React widget and tools that allows customer to quickly Integrate chat and voice in their applications.</F>
           </ProjectLine>
           
-          <ProjectLine title="Itmediaonline" href="http://www.itmediaonline.com/"
-            skills={[SKILLS.JS, SKILLS.CSS,SKILLS.JQUERY]}
-           >
-            <F>IT media online web site</F>
-          </ProjectLine>
-          <ProjectLine title="Statravel Mobile Booking" href="http://m.statravel.com/mt/book.statravel.co.uk/" 
-          skills={[SKILLS.JS, SKILLS.CSS]}
-          >
-            <F>Statravel Mobile Booking</F>
-          </ProjectLine>
           <ProjectLine title="Cadoo" href="https://github.com/digitalapesjam/Cadoo"  skills={[SKILLS.JS]} >
             <F>Cadoo was a game we did in 48 hours of straight code at the <A href="https://en.wikipedia.org/wiki/Nordic_Game_Jam">Nordic Game Jam</A> 2014</F>
           </ProjectLine>
