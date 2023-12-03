@@ -124,16 +124,17 @@ const IndexPage = () => (
       <PageContent>
         <Section title="About Me" >
           <F>
-            <P>I work mainly with Javascript/Typescript since 2010 and I've ended up to be a team leader few times.</P>
-            <P>Since 2016 I'm working as a <A href="https://nodejs.org/en/" >Node.js</A> backender / team leader realizing the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A>.</P>
-            <P>So now It's all about rest API, distributed realtime systems, scaling multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and pretending to understand WebRTC. </P>
-            <P>I also work with <A href="https://reactjs.org/">React.js</A>. A crucial aspect of the job is also to develop demo apps to demonstrate the potential of the Conversation API.We typically do This with React.js.
-               we have created an <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >unofficial Conversation API React SDK</A></P>
-            <P>I sporadically like to write about sofware releated topics in my tech blog: <A href="https://casual-programming.com/">Casual Programming</A>.</P>
-            <P>In my previous job I mainly work as a frontend developer, but I've worked also as backender (using javascript platforms).</P>
-            <P>Back then I was very interested in <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
+            <P>I have been primarily working with JavaScript / TypeScript since 2010, and I've taken on the role of a team leader several times.</P>
+            <P>Since 2016, I've been employed as a <A href="https://nodejs.org/en/" >Node.js</A> backender/team leader, working on the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A>.</P>
+            <P>So now It's all about REST API, distributed real-time systems, scaling multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and pretending to understand WebRTC. </P>
+            <P>I also work with <A href="https://reactjs.org/">React.js</A>.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. We typically do This with React.js and
+               we have created an <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >unofficial Conversation API React SDK</A>.</P>
+            <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>
+            <P>In my previous job I mainly work as a frontend developer (using React and jQuery), but I've worked also as backender (using javascript platforms).</P>
+            <P>I'm interested in  <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
             <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" >progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
-            Cross browser Approach was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).</P>
+            That's probably because Accessibility, and A interoperability with wild range of browsers  was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).
+            </P>
             <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P>
           </F>
         </Section>
@@ -143,35 +144,35 @@ const IndexPage = () => (
             title={<F>Team Leader at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" Jannuary 2018"
             end="Present"
-            desc={<F>I was Promoted Tecnical Team leader in order to lead the  <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  Team and the  <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ).</F>}
+            desc={<F>I was promoted to Tecnical Team leader to lead the Team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ).</F>}
           />
           <ResumeLine  
             title={<F>Node.js API developer at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" November 2016"
             end="December 2017"
-            desc={<F>I was Hired as a Node.js developer in order to work on the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  And the <A href="https://developer.nexmo.com/sdk/stitch/javascript/index">Javascript Client SDK.</A></F>}
+            desc={<F>I was Hired as a Node.js developer to work on the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  And the <A href="https://developer.nexmo.com/sdk/stitch/javascript/index">Javascript Client SDK.</A></F>}
           />
           <ResumeLine  
             title={<F>Senior Front End Developer at <A href="https://www.crunchbase.com/organization/workdigital" >Workdigital</A> (a <A href="https://dhigroupinc.com/home/default.aspx" >DHI</A> company)</F>} 
             start="November 2014"
             end="November 2016"
-            desc="I was Hired as Senior Frontend developer at Workdigital, a fast growing start up based in London."
+            desc="I was Hired as Senior Frontend developer at Workdigital, a fast-growing start up based in London."
           />
           <ResumeLine  
             title={<F>Fullstack Developer as Freelencer</F>} 
             start="Jannuary 2014"
             end="October 2014"
-            desc="I've builded a geolocated chat called CityClub.tv as javascript full-stack developer using NodeJS, socket.io and AngularJS."
+            desc="I built a geolocated chat called CityClub.tv as a JavaScript full-stack developer using NodeJS, socket.io, and AngularJS."
           />
           <ResumeLine  
             title={<F>Team Leader at <A href="https://usablenet.com/" >Usablenet</A></F>} 
             start="August 2010"
             end="May 2012"
-            desc="As a team leader I've worked to balance the workload of a team of developers using. Despite this, every day I've carry out the normal duties of a coder, developing web interfaces for mobile devices using javascript, css, XHTML, HTML5 and XTML, paying particular attention to the browser interoperability. I've Developed also REST API using proprietary tools."
+            desc="As a team leader, I balanced the workload of a team of developers. Despite this, I carried out the normal duties of a coder, developing web interfaces for mobile devices using JavaScript, CSS, XHTML, HTML5, and XTML, paying particular attention to browser interoperability. I also developed REST APIs using proprietary tools."
           />
           <ResumeLine  
             title={<F>Web Developer at <A href="https://usablenet.com/" >Usablenet</A></F>} 
-            desc="As mobile web developer I've deployed mobile websites for big brand such Aetna and Carmax using a propetary platform based on XSLT and Javascript."
+            desc="As a mobile web developer, I deployed mobile websites for big brands such as Aetna and Carmax using a proprietary platform based on XSLT and JavaScript."
             start="May 2012"
             end="October 2014"
           />
