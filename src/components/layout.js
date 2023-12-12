@@ -28,41 +28,23 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div style={{backgroundColor:"#f9f9f9"}} >
-      <section 
-        style={{
-          marginTop:"2.9em",
-          height:"10em",
-          display: "flex",
-          alignItems: "center",
-          justifyContent:"center",
-          backgroundColor:"#202020",
-          color:"white",
-          textAlign:"center",
-          marginBottom:"1.5em",
-        }}
-      >
-        <section style={{paddingTop: "2em"}}>
-          <h2 style={{ margin:"0px", textAlign:"center"}} > Fullstack software engineer. Javascript Dev. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
-TODO</span></span></h2>
+      <div>
+        <section className="header-extension">
+            <h2 className="header-extension-title" > Fullstack software engineer. Javascript Dev. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
+            TODO</span></span>
 
-          <p style={{paddingTop: "1.5em"}} > <HeadLink href="https://casual-programming.com/" >Blog</HeadLink> | <HeadLink href="https://github.com/jurgob" >Github</HeadLink></p>
+            <div className="header-extension-links" > <HeadLink href="https://casual-programming.com/" >Blog</HeadLink> | <HeadLink href="https://github.com/jurgob" >Github</HeadLink></div>
+            </h2>
+            
         </section>
-      </section>
-      <div
-        style={{
-          margin: `0 auto`,
-          padding: `0 1.0875rem 1.45rem`,
-          maxWidth: "980px"
-        }}
-      >
-        <main>{children}</main>
-        <footer
-        className="footer"
-        >
-          Updated on December, 2023
-        </footer>
-      </div>
+        <div className="main-content" >
+          <main>
+            {children}
+          </main>
+          <footer className="footer">
+            Updated on December, 2023
+          </footer>
+        </div>
       </div>
     </>
   )

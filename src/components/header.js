@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
             color: `white`,
             textDecoration: `none`,
             verticalAlign: "middle",
-            lineHeight:"100%"
+            lineHeight:"120%"
           }}
         >
            <StaticImage src="../images/jurgo-icon.png" height="38" width="38"/> <div style={{display:"inline-block", marginTop:"8px"}} >{siteTitle}</div>

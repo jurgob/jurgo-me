@@ -19,6 +19,7 @@ const SKILLS = {
   GOOGLEASR: {name: "Google ASR", href: "https://cloud.google.com/speech-to-text" },
   CSS: {name: "CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
   DISTRIBUTED: {name: "Distributed Systems", href: "https://en.wikipedia.org/wiki/Distributed_computing" },
+  APIDESING: {name: "REST API Design", href: "https://en.wikipedia.org/wiki/REST" },
   WEBRTC: {name: "WebRTC", href: "https://webrtc.org/" },
   JQUERY: {name: "Jquery", href: "https://jquery.com/" },
 }
@@ -48,9 +49,13 @@ const Section = ({children, title}) => {
 }
 
 const ResumeLine = ({title, desc, start, end})=> {
+
+  let sep = start||end ? " - ": "";
+  let sepStartEnd = end ? ", ": "";
+
   return (
     <section style={{marginBottom:"0.9em"}} className="break_inside_avoid" >
-        <h5 style={{margin:"0px", marginBottom:"0.3em"}} >{title} - {start}, {end}</h5>
+        <h5 style={{margin:"0px", marginBottom:"0.3em"}} >{title}{sep}{start}{sepStartEnd}{end}</h5>
         <P>{desc}</P>
       </section>
   )
@@ -90,8 +95,19 @@ const ProjectLine = ({title,href, children, skills})=> {
 const F = React.Fragment
 const P = ({children}) => <p style={{margin:"0px", lineHeight: "140%"}} >{children}</p>
 
-const PageContent = ({children}) => (<div style={{fontSize:"0.9em"}} > {children} </div>)
+const ColumnCenter = ({children}) => (<div className="column-center"> {children} </div>)
 
+const Skills = ({skills})=> {
+  
+  return (
+    <div>
+      {/* {skills[0].name} */}
+      {skills.reduce((acc, {name, href},idx ) => {
+        return acc.concat(<span key={name} >{name} </span>, idx < skills.length - 1 && <span key={name+"sep"} > | </span>)
+      }, [])}
+    </div>
+  )
+}
 
 const Socials = () => {
   
@@ -121,7 +137,10 @@ const Socials = () => {
 const IndexPage = () => (
   <Layout>
       <Seo title="Home" />
-      <PageContent>
+      <div className="column-left" >
+        <div>hello</div>
+      </div>
+      <ColumnCenter>
         <Section title="About Me" >
           <F>
             <P>I have been primarily working with JavaScript / TypeScript since 2010, and I've taken on the role of a team leader several times.</P>
@@ -133,14 +152,14 @@ const IndexPage = () => (
             <P>In my previous job, I primarily worked as a frontend developer, but I also worked as a backender (using JavaScript platforms).</P>
             <P>I'm interested in  <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
             <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" > progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
-            That's probably because accessibility, and interoperability with a wild range of browsers  was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).
+            That's probably because accessibility, and interoperability with a wild range of browsers was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).
             </P>
             <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P>
           </F>
         </Section>
         
         <Section title="Resume" >
-        <ResumeLine  
+          <ResumeLine  
             title={<F>Team Leader at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" Jannuary 2018"
             end="Present"
@@ -236,6 +255,33 @@ const IndexPage = () => (
             <F>Cadoo was a game we did in 48 hours of straight code at the <A href="https://en.wikipedia.org/wiki/Nordic_Game_Jam">Nordic Game Jam</A> 2014</F>
           </ProjectLine>
         </Section>
+        <Section title="Education" >
+        <ResumeLine  
+            title={<F>Bachelor's degree in Computer Science, Web Information Technologies at <A href="https://www.linkedin.com/school/universit%C3%A0-degli-studi-di-udine" >Università degli Studi di Udine </A> </F>} 
+            start=" 2002"
+            end="2006"
+            desc={<F>I studied Computer Science, the curricula I choose was Web Infromation Tecnology. My thesis made me implement a web e-governament portal using <A href="https://www.python.org/" >Python</A>, <A href="https://plone.org/" >Plone</A> and <A href="https://www.zope.org/">Zope</A></F>}
+          />
+        </Section>
+        <Section title="Languages" >
+          <ResumeLine  
+            desc={<F>
+              <ul>
+                <li><b>Italian</b> - Native or bilingual proficiency</li>
+                <li><b>Friulan</b> - Native or bilingual proficiency</li>
+                <li><b>English</b> - Professional working proficiency</li>
+              </ul>
+              
+              </F>}
+          />
+        </Section>
+        <Section title="Skills" >
+          <ResumeLine  
+            desc={<F>
+                <Skills skills={[SKILLS.JS, SKILLS.NODE, SKILLS.TS, SKILLS.COUCHBASE, SKILLS.APIDESING, SKILLS.DISTRIBUTED, SKILLS.REACT, SKILLS.NEXT]} />
+              </F>}
+          />
+        </Section>
         <Section title="Contact Me" >
           <b>Mail:</b> <span>jurgo.boemo at gmail.com</span>
           <br />
@@ -247,7 +293,7 @@ const IndexPage = () => (
         </Section>
 
         
-      </PageContent>
+      </ColumnCenter>
   </Layout>
 )
 

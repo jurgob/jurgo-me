@@ -610,12 +610,86 @@ pre tt:after {
   max-width: 980px      
 }
 
+.main-content {
+  margin: 0px auto; 
+  padding: 0px 1.0875rem 1.45rem; 
+  max-width: 980px;
+}
+
 .footer {
   margin-top: 2rem;
   font-size: 0.8em;          
 }
+.show_on_print {
+  display: hide;
+}
+
+.hide_on_print {
+  display: block;
+}
+.column-center{
+  font-size: 0.9em
+}
+
+.column-left{
+  font-size: 0.9em;
+  display: none;
+}
+
+.header-extension {
+  margin-top: 2.9em; 
+  height: 10em; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-color: rgb(32, 32, 32); 
+  color: white; 
+  text-align: center; 
+  margin-bottom: 1.5em;
+}
+
+.header-extension-title {
+  padding-top: 0.8em;
+}
+
+.header-extension-links {
+  display: block;
+  font-size: 0.7em;
+  padding-top: 1.2em;
+}
 
 @media print {
+  .main-content {
+    margin: 0px!important;
+
+    padding: 0!important;
+
+    max-width:none!important;
+
+    display:table;
+  }
+
+.column-center{
+  display:table-cell;
+  
+}
+  
+.column-left{
+  display:table-cell;
+  width: 200px;
+  background-color: #000;
+  color: white;
+  height: vh;
+}
+
+  .hide_on_print {
+    display: none;
+  }
+
+  .show_on_print {
+    display: auto;
+  }
+
   .header {      
     position: absolute;
   }
