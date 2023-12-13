@@ -193,6 +193,7 @@ const IndexPage = () => (
             <P>I have been primarily working with JavaScript / TypeScript since 2010, and I've taken on the role of a team leader several times.</P>
             <P>Since 2016, I've been employed as a <A href="https://nodejs.org/en/" >Node.js</A> backender/team leader, working on the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A>.</P>
             <P>So now It's all about REST API, distributed real-time systems, scaling multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and working with <A href="https://en.wikipedia.org/wiki/WebRTC" >WebRTC</A>.</P>
+
             <P>I also work with <A href="https://reactjs.org/">React.js</A>.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. We typically do This with React.js and
                we have created an <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >unofficial Conversation API React SDK</A>.</P>
             <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>
@@ -211,7 +212,13 @@ const IndexPage = () => (
             title={<F>Team Leader at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" Jannuary 2018"
             end="Present"
-            desc={<F>I was promoted to Tecnical Team leader to lead the Team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ).</F>}
+            desc={<F>
+              I was promoted to Tecnical Team leader to lead the Team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ). <br />
+              As a team leader, I spearheaded the design and execution of real-time communication solutions, scaled mission-critical databases, and designed REST APIs and SDKs, all within the context of a SAAS platform serving prominent software companies.<br />
+              Given the unique nature of our business and customer base (our clients are developers), business decisions are intricately intertwined with architectural decisions and vice versa, this required me to work very close with product and be a key contributer to the  tech strategy and business direction of the project.<br />
+              This role demanded close collaboration with various teams, including SRE (Site Reliability Engineering), Devrel (Developer Relations), Tech Support, and Presales.<br />
+              As a team leader, I often extended my collaboration to working directly with our customers' development teams, pairing up to help them design and optimize their solutions.
+            </F>}
           />
           <ResumeLine  
             title={<F>Node.js API developer at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
