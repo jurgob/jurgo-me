@@ -677,6 +677,12 @@ a {
   font-size: 0.7em;
   
 }
+.project-skills-line {
+  margin: 0em;
+  padding: 0em;
+}
+
+
 
 @media print {
   .section {
@@ -693,30 +699,33 @@ a {
 
   .main-content {
     margin: 0px!important;
-
     padding: 0!important;
-
     max-width:none!important;
-
     display:table;
   }
 
-.column-center {
-  display:table-cell;
-  padding-left: 1em;
-}
+  .column-center {
+    display:table-cell;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
   
-.column-left {
-  display:table-cell;
-  width: 200px;
-  background-color:rgb(32, 32, 32); 
-  color: white;
-  padding-left: 0.5em;
-}
+  .column-left {
+    display:table-cell;
+    width: 200px;
+    background-color:rgb(32, 32, 32); 
+    color: white;
+    padding-left: 0.5em;
+    padding-top: 1em;
+  }
 
-.column-left h2{
- font-size: .8em;
-}
+  .column-left h2{
+    font-size: 1em;
+  }
+
+  .column-left {
+    font-size: .8em;
+  }
 
   .hide_on_print {
     display: none;
@@ -780,7 +789,7 @@ a {
   }
   .skill_label {
     display: block;
-    
+    padding-bottom: .5em;
   }
 
   .skill_sep {
@@ -788,7 +797,7 @@ a {
   }
 
   .column-center p {
-    font-size: .8em;
+    font-size: .7em;
   }
 
   .column-center h2 {
@@ -796,10 +805,26 @@ a {
   }
 
   .column-center h5 {
-    font-size: .8em;
+    font-size: .7em;
   }
 
   .column-left .education  {
     font-size: .8em;
   }
+
+  .line {
+    padding-bottom: .5em;
+    line-height: 120%;
+  }
+  .label {
+    font-size: .8em;
+  }
+
+  .text {
+    font-size: .8em;
+  }
+  .project-skills-line {
+    line-height: 100%
+  }
+
 }

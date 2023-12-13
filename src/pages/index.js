@@ -73,8 +73,8 @@ const ProjectLine = ({title,href, children, skills})=> {
     <section style={{marginBottom:"0.5em"}} className="break_inside_avoid" >
         <h5 style={{margin:"0.8em 0 0.2em 0"}} ><A href={href}>{title}</A></h5>
         <P>{children}</P>
-        {skills && <div style={{margin:"0em", padding:"0em"}} >
-          <span style={{margin:"0px", paddingLeft:"0em"}} >
+        {skills && <div className="project-skills-line" >
+          <span  >
             {addBetween(
               skills.map(skill => <span style={{margin:"0px", padding:"0"}} ><A  className="project_skill_label"  href={skill.href} >{skill.name}</A></span>),
               <span style={{margin:"0px", padding:"0 0.5em", fontSize: "0.9em"}} >|</span>
@@ -133,6 +133,57 @@ const IndexPage = () => (
   <Layout>
       <Seo title="Home" />
       <div className="column-left" >
+      <Section title="Contacts" className="show_on_print" >
+            {[
+              {
+                value:"+447479199288",
+                name:"Phone"
+              },
+              {
+                value:"jurgo.boemo@gmail.com",
+                name:"Email",
+              },
+              {
+                value:"https://jurgo.me",
+                name:"Website",
+              },
+              {
+                value:"https://casual-programming.com",
+                name:"Blog",
+              },
+          ].map(({value, name}) => {
+              return (
+                <div key={name} className="line">
+                  <b className="label" >{name}:</b><br />
+                  <span className="text" >{value}</span>
+                </div>
+              )
+            })}
+        </Section>
+        <Section title="Socials" className="show_on_print" >
+            {[
+              {
+                href:"https://github.com/jurgob",
+                name:"Github",
+              },
+              {
+                href:"https://uk.linkedin.com/in/jurgo",
+                name:"Linkedin",
+              },
+              {
+                href:"https://twitter.com/UselessClown",
+                name:"Twitter",
+              },
+          
+          ].map(({href, name}) => {
+              return (
+                <div key={name} className="line">
+                  <b className="label" >{name}:</b><br />
+                  <span className="text" >{href}</span>
+                </div>
+              )
+            })}
+        </Section>
         <SectionLanguages className="show_on_print"  />
         <SectionSkills className="show_on_print" />
       </div>
@@ -205,7 +256,7 @@ const IndexPage = () => (
             end="August 2006"
           />
         </Section>
-        <Section title="My Projects" >
+        <Section title="My Projects" className="break_inside_avoid" >
           <ProjectLine title="Conversation API functions" href="https://github.com/jurgob/conversation-api-function" skills={[SKILLS.JS, SKILLS.NODE]} >
             <F>A cli tool that will allow you to write simple application for the Vonage <A href="https://developer.nexmo.com/conversation">Conversation API</A> in your local env with minimal configuration. (I wrote an article about it <A href="https://casual-programming.com/an-easy-way-to-try-vonage-communication-api-locally/">here</A>) </F>
           </ProjectLine>
@@ -280,9 +331,9 @@ const SectionLanguages = ({className}) => (<Section title="Languages" className=
 <ResumeLine 
   desc={<F>
     <div>
-      <div><b>Italian</b> - Native or bilingual proficiency</div>
-      <div><b>Friulan</b> - Native or bilingual proficiency</div>
-      <div><b>English</b> - Professional working proficiency</div>
+      <div className="line" ><b>Italian</b><span> - Native or bilingual proficiency</span></div>
+      <div className="line" ><b>Friulan</b><span> - Native or bilingual proficiency</span></div>
+      <div className="line"><b>English</b><span>  - Professional working proficiency</span></div>
     </div>   
     </F>}
 />
