@@ -213,9 +213,10 @@ const IndexPage = () => (
             start=" Jannuary 2018"
             end="Present"
             desc={<F>
-              I was promoted to Tecnical Team leader to lead the Team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Cliens SDKs </A> (JS | Android | iOS ). <br />
+              I was promoted to Technical Team Leader to lead the team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Clients SDKs </A> (JS | Android | iOS ). <br />
               As a team leader, I spearheaded the design and execution of real-time communication solutions, scaled mission-critical databases, and designed REST APIs and SDKs, all within the context of a SAAS platform serving prominent software companies.<br />
-              Given the unique nature of our business and customer base (our clients are developers), business decisions are intricately intertwined with architectural decisions and vice versa, this required me to work very close with product and be a key contributer to the  tech strategy and business direction of the project.<br />
+              Given the unique nature of our business and customer base (our clients are developers), business decisions are intricately intertwined with architectural decisions and vice versa.<br />
+              This required me to work very closely with product and be a key contributor to the  tech strategy and business direction of the project.<br />
               This role demanded close collaboration with various teams, including SRE (Site Reliability Engineering), Devrel (Developer Relations), Tech Support, and Presales.<br />
               As a team leader, I often extended my collaboration to working directly with our customers' development teams, pairing up to help them design and optimize their solutions.
             </F>}
