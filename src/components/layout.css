@@ -258,7 +258,7 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -657,8 +657,40 @@ pre tt:after {
   font-size: 0.7em;
   padding-top: 1.2em;
 }
+.header-for-print {
+  display: none;
+}
+
+.section {
+  margin-bottom:2em; 
+  padding-bottom:1em; 
+  border-bottom: 1px solid #ddd;
+}
+
+a {
+  text-decoration: none; 
+  font-size: 0.9em;
+  color: rgb(192, 91, 77); 
+}
+
+.project_skill_label {
+  font-size: 0.7em;
+  
+}
 
 @media print {
+  .section {
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+  }
+  .section section{
+    margin-bottom:0em
+  }
+  * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
   .main-content {
     margin: 0px!important;
 
@@ -669,17 +701,21 @@ pre tt:after {
     display:table;
   }
 
-.column-center{
+.column-center {
   display:table-cell;
-  
+  padding-left: 1em;
 }
   
-.column-left{
+.column-left {
   display:table-cell;
   width: 200px;
-  background-color: #000;
+  background-color:rgb(32, 32, 32); 
   color: white;
-  height: vh;
+  padding-left: 0.5em;
+}
+
+.column-left h2{
+ font-size: .8em;
 }
 
   .hide_on_print {
@@ -693,14 +729,35 @@ pre tt:after {
   .header {      
     position: absolute;
   }
+  .header-for-print {
+    display:table;
+    background-color: rgb(32, 32, 32) ;
+    color: white;
+    padding: 0.3em;
+    width: 100%;
+    
+  }
+  .header-for-print-name {
+    font-size: 1.5em;
+    width: 100%;
+  }
 
-  * {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+  .header-for-print-jobtitle {
+    font-size: 1.1em;
+  }
+  .header-for-print-image {
+    display:table-cell;
+    width: 210px;
+
+  }
+  .header-for-print-texts {
+    display:table-cell;
+    /* width: 100%; */
+    text-align: left;
   }
 
   p {
-    font-size: 14px;
+    font-size: .8em;
   }
 
   .footer {
@@ -711,4 +768,38 @@ pre tt:after {
     break-inside: avoid;
   }
 
+  .header-extension {
+    margin-bottom: 0;
+    display: none;
+  }
+  .header {
+    display: none;
+  }
+  .header-extension-links {
+    display: none;
+  }
+  .skill_label {
+    display: block;
+    
+  }
+
+  .skill_sep {
+    display: none;
+  }
+
+  .column-center p {
+    font-size: .8em;
+  }
+
+  .column-center h2 {
+    font-size: 1em;
+  }
+
+  .column-center h5 {
+    font-size: .8em;
+  }
+
+  .column-left .education  {
+    font-size: .8em;
+  }
 }

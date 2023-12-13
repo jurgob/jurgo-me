@@ -24,22 +24,18 @@ const SKILLS = {
   JQUERY: {name: "Jquery", href: "https://jquery.com/" },
 }
 
-const A = ({href, children, style}) => {
+const A = ({href, children, style,className}) => {
   return (
     <a 
-      style={{
-        color:"#c05b4d",
-        textDecoration:"none", 
-        ...style
-      }}
+      className={className}
       href={href}
     >{children}</a>
   )
 }
 
-const Section = ({children, title}) => {
+const Section = ({children, title, className}) => {
   return (
-    <section style={{marginBottom:"2em", paddingBottom:"1em", borderBottom: "1px solid #ddd"}} >
+    <section className={"section "+className} >
       <h2 style={{marginBottom:"0.5em"}} >{title}</h2>
       <span>
         {children}
@@ -48,13 +44,13 @@ const Section = ({children, title}) => {
   );
 }
 
-const ResumeLine = ({title, desc, start, end})=> {
+const ResumeLine = ({className, title, desc, start, end})=> {
 
   let sep = start||end ? " - ": "";
   let sepStartEnd = end ? ", ": "";
 
   return (
-    <section style={{marginBottom:"0.9em"}} className="break_inside_avoid" >
+    <section style={{marginBottom:"0.9em"}} className={className+" break_inside_avoid"} >
         <h5 style={{margin:"0px", marginBottom:"0.3em"}} >{title}{sep}{start}{sepStartEnd}{end}</h5>
         <P>{desc}</P>
       </section>
@@ -80,7 +76,7 @@ const ProjectLine = ({title,href, children, skills})=> {
         {skills && <div style={{margin:"0em", padding:"0em"}} >
           <span style={{margin:"0px", paddingLeft:"0em"}} >
             {addBetween(
-              skills.map(skill => <span style={{margin:"0px", padding:"0"}} ><A style={{ fontSize: "0.9em"}}  href={skill.href} >{skill.name}</A></span>),
+              skills.map(skill => <span style={{margin:"0px", padding:"0"}} ><A  className="project_skill_label"  href={skill.href} >{skill.name}</A></span>),
               <span style={{margin:"0px", padding:"0 0.5em", fontSize: "0.9em"}} >|</span>
               )}
           </span>
@@ -98,12 +94,11 @@ const P = ({children}) => <p style={{margin:"0px", lineHeight: "140%"}} >{childr
 const ColumnCenter = ({children}) => (<div className="column-center"> {children} </div>)
 
 const Skills = ({skills})=> {
-  
   return (
     <div>
       {/* {skills[0].name} */}
       {skills.reduce((acc, {name, href},idx ) => {
-        return acc.concat(<span key={name} >{name} </span>, idx < skills.length - 1 && <span key={name+"sep"} > | </span>)
+        return acc.concat(<span className="skill_label"  key={name} >{name} </span>, idx < skills.length - 1 && <span  className="skill_sep" key={name+"sep"} > | </span>)
       }, [])}
     </div>
   )
@@ -138,7 +133,8 @@ const IndexPage = () => (
   <Layout>
       <Seo title="Home" />
       <div className="column-left" >
-        <div>hello</div>
+        <SectionLanguages className="show_on_print"  />
+        <SectionSkills className="show_on_print" />
       </div>
       <ColumnCenter>
         <Section title="About Me" >
@@ -263,26 +259,9 @@ const IndexPage = () => (
             desc={<F>I studied Computer Science, the curricula I choose was Web Infromation Tecnology. My thesis made me implement a web e-governament portal using <A href="https://www.python.org/" >Python</A>, <A href="https://plone.org/" >Plone</A> and <A href="https://www.zope.org/">Zope</A></F>}
           />
         </Section>
-        <Section title="Languages" >
-          <ResumeLine  
-            desc={<F>
-              <ul>
-                <li><b>Italian</b> - Native or bilingual proficiency</li>
-                <li><b>Friulan</b> - Native or bilingual proficiency</li>
-                <li><b>English</b> - Professional working proficiency</li>
-              </ul>
-              
-              </F>}
-          />
-        </Section>
-        <Section title="Skills" >
-          <ResumeLine  
-            desc={<F>
-                <Skills skills={[SKILLS.JS, SKILLS.NODE, SKILLS.TS, SKILLS.COUCHBASE, SKILLS.APIDESING, SKILLS.DISTRIBUTED, SKILLS.REACT, SKILLS.NEXT]} />
-              </F>}
-          />
-        </Section>
-        <Section title="Contact Me" >
+        <SectionLanguages className="hide_on_print"  />
+        <SectionSkills className="hide_on_print" />
+        <Section title="Contact Me" className="hide_on_print" >
           <b>Mail:</b> <span>jurgo.boemo at gmail.com</span>
           <br />
           <b>Socials</b>
@@ -296,5 +275,26 @@ const IndexPage = () => (
       </ColumnCenter>
   </Layout>
 )
+
+const SectionLanguages = ({className}) => (<Section title="Languages" className={className} >
+<ResumeLine 
+  desc={<F>
+    <div>
+      <div><b>Italian</b> - Native or bilingual proficiency</div>
+      <div><b>Friulan</b> - Native or bilingual proficiency</div>
+      <div><b>English</b> - Professional working proficiency</div>
+    </div>   
+    </F>}
+/>
+</Section>)
+
+const SectionSkills = ({className}) => (<Section className={className} title="Skills" >
+<ResumeLine  
+  
+  desc={<F>
+      <Skills skills={[SKILLS.JS, SKILLS.NODE, SKILLS.TS, SKILLS.COUCHBASE, SKILLS.APIDESING, SKILLS.DISTRIBUTED, SKILLS.REACT, SKILLS.NEXT]} />
+    </F>}
+/>
+</Section>)
 
 export default IndexPage
