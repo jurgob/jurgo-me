@@ -191,7 +191,7 @@ const IndexPage = () => (
         <Section title="About Me" >
           <F>
             <P>I have been primarily working with JavaScript / TypeScript since 2010, and I've taken on the role of a team leader several times.</P>
-            <P>Since 2016, I've been employed as a <A href="https://nodejs.org/en/" >Node.js</A> backender/team leader, working on the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A>.</P>
+            <P>Since 2016, I've been employed as a <A href="https://nodejs.org/en/" >Node.js</A> backender/team leader, working on the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>).</P>
             <P>So now It's all about REST API, distributed real-time systems, scaling multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and working with <A href="https://en.wikipedia.org/wiki/WebRTC" >WebRTC</A>.</P>
 
             <P>I also work with <A href="https://reactjs.org/">React.js</A>.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. We typically do This with React.js and
