@@ -209,7 +209,7 @@ const IndexPage = () => (
         
         <Section title="Resume" >
           <ResumeLine  
-            title={<F>Team Leader at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
+            title={<F>Team Leader at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>)</F>} 
             start=" Jannuary 2018"
             end="Present"
             desc={<F>

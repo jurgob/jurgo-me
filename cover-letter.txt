@@ -1,6 +1,6 @@
 Dear [EmployerName],
 
-I am writing to express my interest in the [Job Title] position at [Company Name], as advertised on [where you found the job posting]. With a strong background in JavaScript/TypeScript and extensive experience in software development, I am confident in my ability to contribute effectively to your dynamic team.
+I am writing to express my interest in the [Job Title] position at [Company Name]. With a strong background in JavaScript/TypeScript and extensive experience in software development, I am confident in my ability to contribute effectively to your dynamic team.
 
 In my 17-years-long journey in the tech industry, I have evolved into a versatile professional with proficiency in both frontend and backend development. My journey with JavaScript/TypeScript dates back to 2010, and since 2016, I have been instrumental as a Node.js backender and team leader at Vonage, contributing significantly to the realization of the Conversation API.
 
@@ -8,7 +8,7 @@ Throughout my career, I have demonstrated expertise in REST API development, dis
 
 My previous role as a Senior Frontend Developer at Workdigital and my experience as a Fullstack Developer Freelancer equipped me with a comprehensive skill set. I have a strong foundation in isomorphic JavaScript, a keen interest in the ReactJS framework, and a deep understanding of the Flux approach.
 
-I am proud of my achievements as a Technical Team Leader at Nexmo, where I led the Conversation API Team and managed Client SDKs for JavaScript, Android, and iOS. This experience enhanced my leadership skills, allowing me to effectively guide a team while contributing hands-on to the development process.
+I am proud of my achievements as a Technical Team Leader at Vonage (part of Ericsson), where I led the Conversation API Team and managed Client SDKs for JavaScript, Android, and iOS. This experience enhanced my leadership skills, allowing me to effectively guide a team while contributing hands-on to the development process.
 
 My commitment to quality and innovation is evident in my diverse project portfolio, ranging from geolocated chat applications to interactive learning tools like JSQuest. I have also contributed to significant projects like the Vonage Conversation API, Client SDK JS, and various multichannel chat applications.
 
