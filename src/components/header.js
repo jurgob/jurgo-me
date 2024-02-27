@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
           <div className="header-for-print-image"  ><StaticImage src="../images/jurgo-icon.png" height="98" width="98" style={{borderRadius:"50px"}} /></div>
           <div className="header-for-print-texts"  >
             <h2 className="header-for-print-name">Jurgo Boemo </h2>
-            <h3 className="header-for-print-jobtitle">Fullstack software engineer. Javascript Developer </h3>
+            <h3 className="header-for-print-jobtitle">Fullstack software engineer.</h3>
           </div>
           
       </section>

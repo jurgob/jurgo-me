@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
         <section className="header-extension">
-            <h2 className="header-extension-title" > Fullstack software engineer. Javascript Dev. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
+            <h2 className="header-extension-title" > Fullstack software engineer. <span style={{whiteSpace: "nowrap"}} >Trying to be ...  <span style={{fontSize:"0.85em"}} >&frasl;&frasl;
             TODO</span></span>
 
             <div className="header-extension-links" > <HeadLink href="https://casual-programming.com/" >Blog</HeadLink> | <HeadLink href="https://github.com/jurgob" >Github</HeadLink></div>

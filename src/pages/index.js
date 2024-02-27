@@ -5,32 +5,52 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 const SKILLS = {
-  JS : {name: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-  NODE : {name: "Node.js", href: "https://nodejs.org/en/" },
-  COUCHBASE : {name: "Couchbase", href: "https://www.couchbase.com/" },
-  SOCKETIO: {name: "Socket.io", href: "https://socket.io/" },
-  REACT : {name: "React", href: "https://reactjs.org/" },
-  TS: {name: "Typescript", href: "https://www.typescriptlang.org/" },
-  TURBO: {name: "TurboRepo", href: "https://turbo.build/" },
-  NEXT: {name: "Next.js", href: "https://nextjs.org/" },
-  FLY: {name: "Fly.io", href: "https://fly.io/" },
-  OPENAIAPI: {name: "OpenAI API", href: "https://beta.openai.com/" },
-  GOOGLETTS: {name: "Google TTS", href: "https://cloud.google.com/text-to-speech" },
-  GOOGLEASR: {name: "Google ASR", href: "https://cloud.google.com/speech-to-text" },
-  CSS: {name: "CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-  DISTRIBUTED: {name: "Distributed Systems", href: "https://en.wikipedia.org/wiki/Distributed_computing" },
-  APIDESING: {name: "REST API Design", href: "https://en.wikipedia.org/wiki/REST" },
-  WEBRTC: {name: "WebRTC", href: "https://webrtc.org/" },
-  JQUERY: {name: "Jquery", href: "https://jquery.com/" },
+  JS : {name: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", rank: 10},
+  TYPESCRIPT : {name: "Typescript", href: "https://www.typescriptlang.org/", rank: 10 },
+  NODE : {name: "Node.js", href: "https://nodejs.org/en/", rank: 10 },
+  REACT : {name: "React", href: "https://reactjs.org/",rank: 10 },
+  REACT_NATIVE: {name: "React Native", href: "https://reactnative.dev/",rank: 10 },
+  RUST: {name: "Rust", href: "https://www.rust-lang.org/",rank: 9 },
+  AWS: {name: "AWS", href: "https://aws.amazon.com/" ,rank: 9},
+  DOCKER: {name: "Docker", href: "https://www.docker.com/", rank: 8 },
+  KUBERNETES: {name: "Kubernetes", href: "https://kubernetes.io/", rank: 8 },
+  EXPO: {name: "Expo", href: "https://expo.dev",rank: 6 },
+  DISTRIBUTED: {name: "Distributed Systems", href: "https://en.wikipedia.org/wiki/Distributed_computing", rank: 8 },
+  NEXT: {name: "Next.js", href: "https://nextjs.org/" ,rank: 7},
+  APIDESING: {name: "REST API Design", href: "https://en.wikipedia.org/wiki/REST", rank: 7 },
+  WEBRTC: {name: "WebRTC", href: "https://webrtc.org/", rank: 6 },
+  COUCHBASE : {name: "Couchbase", href: "https://www.couchbase.com/", rank: 6 },
+  SOCKETIO: {name: "Socket.io", href: "https://socket.io/",rank: 6 },
+  GOLANG: {name: "Golang", href: "https://golang.org/" ,rank: 4},
+  POSTGRESS: {name: "Postgress", href: "https://www.postgresql.org/", rank: 4 },
+  NIGHTWATCH: {name: "Nightwatch.js", href: "https://nightwatchjs.org/", rank: 3 },
+  GRAFANA: {name: "Grafana", href: "https://grafana.com/",rank: 3 },
+  ELASTICSEARCH: {name: "Elasticsearch", href: "https://www.elastic.co/", rank: 3 },
+  KIBANA: {name: "Kibana", href: "https://www.elastic.co/kibana", rank: 3 },
+  PROMETHEUS: {name: "Prometheus", href: "https://prometheus.io/", rank: 3 },
+  TURBO: {name: "TurboRepo", href: "https://turbo.build/" ,rank: 3},
+  FLY: {name: "Fly.io", href: "https://fly.io/",rank: 3 },
+  NOMAD: {name: "Nomad", href: "https://www.nomadproject.io/", rank: 3 },
+  OPENAIAPI: {name: "OpenAI API", href: "https://beta.openai.com/" ,rank: 3},
+  GOOGLETTS: {name: "Google TTS", href: "https://cloud.google.com/text-to-speech" ,rank: 3},
+  GOOGLEASR: {name: "Google ASR", href: "https://cloud.google.com/speech-to-text" ,rank: 3},
+  CSS: {name: "CSS", href: "https://developer.mozilla.org/en-US/docs/Web/CSS" ,rank: 3},
+  JQUERY: {name: "Jquery", href: "https://jquery.com/", rank: 1 },
+  
 }
 
+const Skl = ({skill}) => {
+  const {name, href} = skill;
+  return (<A href={href} >{name} </A>)
+};
+
+
 const A = ({href, children, style,className}) => {
-  return (
-    <a 
+  return (<a 
+      style={{display:"inline-block", ...style}}
       className={className}
       href={href}
-    >{children}</a>
-  )
+    >{children}</a>)
 }
 
 const Section = ({children, title, className}) => {
@@ -190,28 +210,39 @@ const IndexPage = () => (
       <ColumnCenter>
         <Section title="About Me" >
           <F>
-            <P>I have been primarily working with JavaScript / TypeScript since 2010, and I've taken on the role of a team leader several times.</P>
-            <P>Since 2016, I've been employed as a <A href="https://nodejs.org/en/" >Node.js</A> backender/team leader, working on the <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A> at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>).</P>
-            <P>So now It's all about REST API, distributed real-time systems, scaling multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and working with <A href="https://en.wikipedia.org/wiki/WebRTC" >WebRTC</A>.</P>
+             <P>I'm a full stack developers working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.RUST} /> and <Skl skill={SKILLS.GOLANG} />. I also know <Skl skill={SKILLS.REACT} /> and <Skl skill={SKILLS.REACT_NATIVE} />.</P>
+            
+            <P>I assumed the role of tech leader multiple times, consistently delving into the coding details of our projects and actively leveraging my expertise to ensure their success.</P>
+            
+            <P>I'm now working on a project called <A href="https://mytastytales.com">MyTastyTales</A> using <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE}/>, <Skl skill={SKILLS.POSTGRESS} />, <Skl skill={SKILLS.DOCKER} /> and <Skl skill={SKILLS.FLY} />.</P>
+            
+            <P>I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
+            Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several promient software companies. more specifically si REST API providing a  multichannel real-time comunication.</P>
+            <P>Working to conversation service I've learnd a lot about how to deal with real time comunications, distributed real-time systems, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
+            <P>This involved also a deep involvment in the Infrastracture management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoirng tools such as <Skl skill={SKILLS.GRAFANA}/>,<Skl skill={SKILLS.KIBANA}/>,<Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
+            <P>I've also worked with <Skl skill={SKILLS.REACT} />.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. 
+            We typically do This with React.js and we have created the <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >Conversation API React SDK</A>.</P>
+            <P>Over time, my fascination with <Skl skill={SKILLS.RUST} /> has deepened significantly. I've not only integrated it into our workplace 
+            but also actively contributed to the <A href="https://github.com/webrtc-rs/webrtc">Webrtc.rs</A> project.</P>
 
-            <P>I also work with <A href="https://reactjs.org/">React.js</A>.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. We typically do This with React.js and
-               we have created an <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >unofficial Conversation API React SDK</A>.</P>
             <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>
-            <P>In recent times, I've developed a keen interest in <A href="https://www.rust-lang.org/">Rust</A> and have been actively learning it in my free time. While I lack direct production experience with Rust, I've engaged in minor contributions to the <A href="https://github.com/webrtc-rs/webrtc">Webrtc.rs</A> project and participated in the <A href="https://github.com/jurgob/aoc2022" >Advent of Code 2022</A> programming challenge.</P>
-            <P>In my previous job, I primarily worked as a frontend developer, but I also worked as a backender (using JavaScript platforms).</P>
+            
+            {/* <P>In my previous job, I primarily worked as a frontend developer, but I also worked as a backender (using JavaScript platforms). </P>
+            
             <P>I'm interested in  <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
+            
             <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" > progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
             That's probably because accessibility, and interoperability with a wild range of browsers was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).
             </P>
-            <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P>
+            <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P> */}
           </F>
         </Section>
         
         <Section title="Resume" >
           <ResumeLine  
-            title={<F>Team Leader at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>)</F>} 
+            title={<F>Tech Leader at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>)</F>} 
             start=" Jannuary 2018"
-            end="Present"
+            end="Jannuary 2024"
             desc={<F>
               I was promoted to Technical Team Leader to lead the team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Clients SDKs </A> (JS | Android | iOS ). <br />
               As a team leader, I spearheaded the design and execution of real-time communication solutions, scaled mission-critical databases, and designed REST APIs and SDKs, all within the context of a SAAS platform serving prominent software companies.<br />
@@ -219,19 +250,43 @@ const IndexPage = () => (
               This required me to work very closely with product and be a key contributor to the  tech strategy and business direction of the project.<br />
               This role demanded close collaboration with various teams, including SRE (Site Reliability Engineering), Devrel (Developer Relations), Tech Support, and Presales.<br />
               As a team leader, I often extended my collaboration to working directly with our customers' development teams, pairing up to help them design and optimize their solutions.
+              I Worked in a cross-functional team of 40 engineers, direclty leading 10 of them, working across the full SDLC. <br />
+              I also Worked in an higly flexible Agile Kanban process, with a strong focus on continuous delivery and continuous improvement.
+              <br /><b>Personal achivement:</b>
+              <br /> - Designed and lead the implementation of integrating the IM channels (SMS, Facebook, Whatsapp) with the Conversation API.
+              <br /> - Designed and lead the implementationof increasing the allowed partecipand in a conversation from 20 to 3000.
+              <br /> - Fixed security vulnerabilities on both our Docker images and our Node.js code.
+              <br /> - Partecipate to the Desing and effort of The system migration from Cloudflare to <Skl skill={SKILLS.AWS} /> and <Skl skill={SKILLS.NOMAD} /> / <Skl skill={SKILLS.KUBERNETES} />.
+              <br /> - Designed and implemented metrics and kibana dashboard used to monitor the api in order to reduce MTTR and MTTR during incidents.
+              <br /> - Designed and lead the implementation of the new Cross Platrorm SDK (JS | Android | iOS). Using a flux architecture. 
+              <br /> - Designed and lead the implementation of Cross Platrorm SDK Testing Strategy. 
+              <br /> - Personally implemented several example application of how to use the Conversation API. 
+
             </F>}
           />
           <ResumeLine  
             title={<F>Node.js API developer at <A href="https://www.vonage.co.uk/communications-apis/campaigns/nexmo-is-now-vonage-apis" >Nexmo</A> (a <A href="https://www.vonage.co.uk/" >Vonage</A> company)</F>} 
             start=" November 2016"
             end="December 2017"
-            desc={<F>I was Hired as a Node.js developer to work on the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  And the <A href="https://developer.nexmo.com/sdk/stitch/javascript/index">Javascript Client SDK.</A></F>}
+            desc={<F>
+              I was Hired as a Node.js developer to work on the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  And the <A href="https://developer.nexmo.com/sdk/stitch/javascript/index">Javascript Client SDK.</A>
+              The api was a POC with some onboarded customers, I was the first senior developer working on it, and I was responsible for scaling the api.
+              <br/><b>Personal achivement:</b>
+              <br /> - introduced test driven development in the team. I wrote the first test and I lead the effort of moving the code coverage from 0 to 80%.
+              <br /> - implemented the in-app voice feature on the backend. working very closely with the client SDK team and the voice experts.
+              <br /> - implemented the designe and lead the effort of redusinng the response time of the api from 1.5s to 300ms.
+              </F>}
           />
           <ResumeLine  
             title={<F>Senior Front End Developer at <A href="https://www.crunchbase.com/organization/workdigital" >Workdigital</A> (a <A href="https://dhigroupinc.com/home/default.aspx" >DHI</A> company)</F>} 
             start="November 2014"
             end="November 2016"
-            desc="I was Hired as Senior Frontend developer at Workdigital, a fast-growing start up based in London."
+            desc={<F>
+              I was Hired as Senior Frontend developer at Workdigital, a fast-growing start up based in London.
+              <br /><b>Personal achivement:</b>
+              <br /> - I've introduced <Skl skill={SKILLS.REACT} /> in the company, Implementing from scratch An internal portal.
+              <br /> - I've designed and Implementing E2E tests inside the company using <Skl skill={SKILLS.NIGHTWATCH} />.
+              </F>}
           />
           <ResumeLine  
             title={<F>Fullstack Developer as Freelencer</F>} 
@@ -287,22 +342,22 @@ const IndexPage = () => (
             <F>The Conversation API enables you to build conversation features where communication can take place across multiple mediums including IP Messaging, PSTN Voice, SMS and WebRTC Audio and Video.</F>
           </ProjectLine>
           <ProjectLine title="Client SDK JS" href="https://developer.nexmo.com/sdk/stitch/javascript/index" 
-            skills={[SKILLS.TS, SKILLS.SOCKETIO, SKILLS.WEBRTC]} 
+            skills={[SKILLS.TYPESCRIPT, SKILLS.SOCKETIO, SKILLS.WEBRTC]} 
           >
             <F>Vonage Client SDK allows you to build Programmable Conversation applications.</F>
           </ProjectLine>
           <ProjectLine title="A Contact Center example app" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/contact-center" 
-            skills={[SKILLS.TS, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO]} 
+            skills={[SKILLS.TYPESCRIPT, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO]} 
           >
             <F>An example of how to implement a very simple contact center. Customer would interract with it via SMS or facebook page, agents would respond using the browser</F>
           </ProjectLine>
           <ProjectLine title="A Multichannel chat app" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/multichannel-app" 
-            skills={[SKILLS.TS, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO, SKILLS.GOOGLEASR, SKILLS.GOOGLETTS, SKILLS.OPENAIAPI, SKILLS.FLY]}
+            skills={[SKILLS.TYPESCRIPT, SKILLS.NODE, SKILLS.NEXT, SKILLS.TURBO, SKILLS.GOOGLEASR, SKILLS.GOOGLETTS, SKILLS.OPENAIAPI, SKILLS.FLY]}
           >
             <F>A DYI slack like app, where you can use inapp voice, pstn voice, chat, facebook message, whatsapp and sms. You can also "talk" with openai </F>
           </ProjectLine>
           <ProjectLine title="Conversation API React SDK (experimental)" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" 
-            skills={[SKILLS.TS, SKILLS.REACT]}
+            skills={[SKILLS.TYPESCRIPT, SKILLS.REACT]}
           >
             <F>An experimenta Conversation API React SDK. It's a set of React widget and tools that allows customer to quickly Integrate chat and voice in their applications.</F>
           </ProjectLine>
@@ -352,7 +407,7 @@ const SectionSkills = ({className}) => (<Section className={className} title="Sk
 <ResumeLine  
   
   desc={<F>
-      <Skills skills={[SKILLS.JS, SKILLS.NODE, SKILLS.TS, SKILLS.COUCHBASE, SKILLS.APIDESING, SKILLS.DISTRIBUTED, SKILLS.REACT, SKILLS.NEXT]} />
+      <Skills skills={Object.values(SKILLS).filter(s => s.rank > 3).sort((a,b)=> b.rank - a.rank)} />
     </F>}
 />
 </Section>)
