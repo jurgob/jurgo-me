@@ -22,7 +22,7 @@ const SKILLS = {
   COUCHBASE : {name: "Couchbase", href: "https://www.couchbase.com/", rank: 6 },
   SOCKETIO: {name: "Socket.io", href: "https://socket.io/",rank: 6 },
   GOLANG: {name: "Golang", href: "https://golang.org/" ,rank: 4},
-  POSTGRESS: {name: "Postgress", href: "https://www.postgresql.org/", rank: 4 },
+  POSTGRES: {name: "Postgres", href: "https://www.postgresql.org/", rank: 4 },
   NIGHTWATCH: {name: "Nightwatch.js", href: "https://nightwatchjs.org/", rank: 3 },
   GRAFANA: {name: "Grafana", href: "https://grafana.com/",rank: 3 },
   ELASTICSEARCH: {name: "Elasticsearch", href: "https://www.elastic.co/", rank: 3 },
@@ -210,16 +210,16 @@ const IndexPage = () => (
       <ColumnCenter>
         <Section title="About Me" >
           <F>
-             <P>I'm a full stack developers working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.RUST} /> and <Skl skill={SKILLS.GOLANG} />. I also know <Skl skill={SKILLS.REACT} /> and <Skl skill={SKILLS.REACT_NATIVE} />.</P>
+             <P>I'm a full stack developer working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.RUST} /> and <Skl skill={SKILLS.GOLANG} />. I also know <Skl skill={SKILLS.REACT} /> and <Skl skill={SKILLS.REACT_NATIVE} />.</P>
             
             <P>I assumed the role of tech leader multiple times, consistently delving into the coding details of our projects and actively leveraging my expertise to ensure their success.</P>
             
-            <P>I'm now working on a project called <A href="https://mytastytales.com">MyTastyTales</A> using <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE}/>, <Skl skill={SKILLS.POSTGRESS} />, <Skl skill={SKILLS.DOCKER} /> and <Skl skill={SKILLS.FLY} />.</P>
+            <P>I'm now working on a project called <A href="https://mytastytales.com">MyTastyTales</A> using <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE}/>, <Skl skill={SKILLS.POSTGRES} />, <Skl skill={SKILLS.DOCKER} /> and <Skl skill={SKILLS.FLY} />.</P>
             
             <P>I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
-            Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several promient software companies. more specifically si REST API providing a  multichannel real-time comunication.</P>
-            <P>Working to conversation service I've learnd a lot about how to deal with real time comunications, distributed real-time systems, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
-            <P>This involved also a deep involvment in the Infrastracture management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoirng tools such as <Skl skill={SKILLS.GRAFANA}/>, <Skl skill={SKILLS.KIBANA}/>, <Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
+            Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several prominent software companies. More specifically is a REST API providing a multichannel real-time communication.</P>
+            <P>Working at the conversation API I've learned a lot about how to deal with microservices, distributed systems, real-time communication, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
+            <P>This also involved a deep involvement in the infrastructure management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoring tools such as <Skl skill={SKILLS.GRAFANA}/>, <Skl skill={SKILLS.KIBANA}/>, <Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
             <P>I've also worked with <Skl skill={SKILLS.REACT} />.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. 
             We typically do This with React.js and we have created the <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >Conversation API React SDK</A>.</P>
             <P>Over time, my fascination with <Skl skill={SKILLS.RUST} /> has deepened significantly. I've not only integrated it into our workplace 
@@ -247,19 +247,19 @@ const IndexPage = () => (
               I was promoted to Technical Team Leader to lead the team behind the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A> and the <A href="https://developer.nexmo.com/client-sdk/overview"> Clients SDKs </A> (JS | Android | iOS ). <br />
               As a team leader, I spearheaded the design and execution of real-time communication solutions, scaled mission-critical databases, and designed REST APIs and SDKs, all within the context of a SAAS platform serving prominent software companies.<br />
               Given the unique nature of our business and customer base (our clients are developers), business decisions are intricately intertwined with architectural decisions and vice versa.<br />
-              This required me to work very closely with product and be a key contributor to the  tech strategy and business direction of the project.<br />
+              This required me to work very closely with the product team and be a key contributor to the  tech strategy and business direction of the project.<br />
               This role demanded close collaboration with various teams, including SRE (Site Reliability Engineering), Devrel (Developer Relations), Tech Support, and Presales.<br />
               As a team leader, I often extended my collaboration to working directly with our customers' development teams, pairing up to help them design and optimize their solutions.
               I Worked in a cross-functional team of 40 engineers, direclty leading 10 of them, working across the full SDLC. <br />
               I also Worked in an higly flexible Agile Kanban process, with a strong focus on continuous delivery and continuous improvement.
-              <br /><b>Personal achivement:</b>
-              <br /> - Designed and lead the implementation of integrating the IM channels (SMS, Facebook, Whatsapp) with the Conversation API.
-              <br /> - Designed and lead the implementationof increasing the allowed partecipand in a conversation from 20 to 3000.
+              <br /><b>Personal achievement:</b>
+              <br /> - Designed and led the implementation of integrating the IM channels (SMS, Facebook, Whatsapp) with the Conversation API.
+              <br /> - Designed and led the implementation of increasing the allowed participants in a conversation from 20 to 3000.
               <br /> - Fixed security vulnerabilities on both our Docker images and our Node.js code.
-              <br /> - Partecipate to the Desing and effort of The system migration from Cloudflare to <Skl skill={SKILLS.AWS} /> and <Skl skill={SKILLS.NOMAD} /> / <Skl skill={SKILLS.KUBERNETES} />.
+              <br /> - Participate in the Design and effort of the system migration from Cloudflare to <Skl skill={SKILLS.AWS} /> and <Skl skill={SKILLS.NOMAD} /> / <Skl skill={SKILLS.KUBERNETES} />.
               <br /> - Designed and implemented metrics and kibana dashboard used to monitor the api in order to reduce MTTR and MTTR during incidents.
-              <br /> - Designed and lead the implementation of the new Cross Platrorm SDK (JS | Android | iOS). Using a flux architecture. 
-              <br /> - Designed and lead the implementation of Cross Platrorm SDK Testing Strategy. 
+              <br /> - Designed and led the implementation of the new Cross Platform SDK (JS | Android | iOS). Using a flux architecture. 
+              <br /> - Designed and led the implementation of Cross Platform SDK Testing Strategy. 
               <br /> - Personally implemented several example application of how to use the Conversation API. 
 
             </F>}
@@ -271,7 +271,7 @@ const IndexPage = () => (
             desc={<F>
               I was Hired as a Node.js developer to work on the <A href="https://developer.nexmo.com/conversation/overview" >Conversation API</A>  And the <A href="https://developer.nexmo.com/sdk/stitch/javascript/index">Javascript Client SDK.</A>
               The api was a POC with some onboarded customers, I was the first senior developer working on it, and I was responsible for scaling the api.
-              <br/><b>Personal achivement:</b>
+              <br/><b>Personal achievement:</b>
               <br /> - introduced test driven development in the team. I wrote the first test and I lead the effort of moving the code coverage from 0 to 80%.
               <br /> - implemented the in-app voice feature on the backend. working very closely with the client SDK team and the voice experts.
               <br /> - implemented the designe and lead the effort of redusinng the response time of the api from 1.5s to 300ms.
@@ -283,7 +283,7 @@ const IndexPage = () => (
             end="November 2016"
             desc={<F>
               I was Hired as Senior Frontend developer at Workdigital, a fast-growing start up based in London.
-              <br /><b>Personal achivement:</b>
+              <br /><b>Personal achievement:</b>
               <br /> - I've introduced <Skl skill={SKILLS.REACT} /> in the company, Implementing from scratch An internal portal.
               <br /> - I've designed and Implementing E2E tests inside the company using <Skl skill={SKILLS.NIGHTWATCH} />.
               </F>}
@@ -308,13 +308,13 @@ const IndexPage = () => (
           />
           <ResumeLine  
             title={<F>Software Engineer at  <A href="https://github.com/digitalapesjam" >Digitalapes </A></F>} 
-            desc={<F>I co-founded Digitalapes, a startup company dedicated to the development of a mobile geo-localized community for smart-phone users. My main responsibilities were the design and the development of web sites using <A href="http://www.gwtproject.org/overview.html" >GTW framework</A>, executing smoke tests and write <A href="https://wiki.osdev.org/GCC_Cross-Compiler" >cross-compiling for GCC compiler</A> guides.</F>}
+            desc={<F>I co-founded Digitalapes, a startup company dedicated to the development of a mobile geo-localized community for smart-phone users. My main responsibilities were the design and the development of websites using <A href="http://www.gwtproject.org/overview.html" >GTW framework</A>, executing smoke tests and writing <A href="https://wiki.osdev.org/GCC_Cross-Compiler" >cross-compiling for GCC compiler</A> guides.</F>}
             start="May 2012"
             end="October 2014"
           />
           <ResumeLine  
             title={<F>Python Web Developer as Contractor at <A href="https://www.uniud.it/en/uniud-international?set_language=en" >University of Udine</A></F>} 
-            desc={<F>For my bachelord thesis I've helped to deploy an e-governament portal developed by the University of Udine for some little town on Friuli Venezia Giulia. After this, I've worked a little bit as contractor in order to fix bugs and fulfill change requests in the post sale phase. 
+            desc={<F>For my bachelor thesis I've helped to deploy an e-government portal developed by the University of Udine for some little town on Friuli Venezia Giulia. After this, I've worked a little bit as contractor in order to fix bugs and fulfil change requests in the post sale phase. 
               Technologies involved in this project were <F href="https://plone.org/" >Plone</F> and <A href="https://www.zope.org/">Zope</A> </F>}
             start="July 2006"
             end="August 2006"
@@ -359,7 +359,7 @@ const IndexPage = () => (
           <ProjectLine title="Conversation API React SDK (experimental)" href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" 
             skills={[SKILLS.TYPESCRIPT, SKILLS.REACT]}
           >
-            <F>An experimenta Conversation API React SDK. It's a set of React widget and tools that allows customer to quickly Integrate chat and voice in their applications.</F>
+            <F>An experimental Conversation API React SDK. It's a set of React widget and tools that allows customers to quickly Integrate chat and voice in their applications.</F>
           </ProjectLine>
           
           <ProjectLine title="Cadoo" href="https://github.com/digitalapesjam/Cadoo"  skills={[SKILLS.JS]} >
@@ -371,7 +371,7 @@ const IndexPage = () => (
             title={<F>Bachelor's degree in Computer Science, Web Information Technologies at <A href="https://www.linkedin.com/school/universit%C3%A0-degli-studi-di-udine" >Università degli Studi di Udine </A> </F>} 
             start=" 2002"
             end="2006"
-            desc={<F>I studied Computer Science, the curricula I choose was Web Infromation Tecnology. My thesis made me implement a web e-governament portal using <A href="https://www.python.org/" >Python</A>, <A href="https://plone.org/" >Plone</A> and <A href="https://www.zope.org/">Zope</A></F>}
+            desc={<F>I studied Computer Science, the curriculum I chose was Web Information Technology. My thesis made me implement a web e-government portal using <A href="https://www.python.org/" >Python</A>, <A href="https://plone.org/" >Plone</A> and <A href="https://www.zope.org/">Zope</A></F>}
           />
         </Section>
         <SectionLanguages className="hide_on_print"  />
@@ -383,7 +383,7 @@ const IndexPage = () => (
           <Socials/>
           <b>Read / Write</b>
           <P>I keep a tech blog called <A href="https://casual-programming.com/" >Casual Programming</A>.</P>
-          <P>I also mantain a Tech Reading List of articles I found interesting here: <A href="https://jurgoboemo.tumblr.com/" >jurgoboemo.tumblr.com</A>   </P>
+          <P>I also maintain a Tech Reading List of articles I found interesting here: <A href="https://jurgoboemo.tumblr.com/" >jurgoboemo.tumblr.com</A>   </P>
         </Section>
 
         
