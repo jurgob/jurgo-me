@@ -684,7 +684,7 @@ a {
 
 
 
-@media print {
+@media print  {
   .section {
     margin-bottom: .5em;
     padding-bottom: .5em;
