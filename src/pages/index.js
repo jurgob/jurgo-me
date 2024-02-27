@@ -256,11 +256,13 @@ const IndexPage = () => (
               <br /> - Designed and led the implementation of integrating the IM channels (SMS, Facebook, Whatsapp) with the Conversation API.
               <br /> - Designed and led the implementation of increasing the allowed participants in a conversation from 20 to 3000.
               <br /> - Fixed security vulnerabilities on both our Docker images and our Node.js code.
-              <br /> - Participate in the Design and effort of the system migration from Cloudflare to <Skl skill={SKILLS.AWS} /> and <Skl skill={SKILLS.NOMAD} /> / <Skl skill={SKILLS.KUBERNETES} />.
+              <br /> - Designed and led the implementation of the React SDK.
+              <br /> - Personally implemented several example application of how to use the Conversation API, using React, Next.js, Docker and Fly.io. 
+              <br /> - Participate in the Design and effort of the system migration from Cloudflare to AWS and Nomad/Kubernetes.
               <br /> - Designed and implemented metrics and kibana dashboard used to monitor the api in order to reduce MTTR and MTTR during incidents.
               <br /> - Designed and led the implementation of the new Cross Platform SDK (JS | Android | iOS). Using a flux architecture. 
               <br /> - Designed and led the implementation of Cross Platform SDK Testing Strategy. 
-              <br /> - Personally implemented several example application of how to use the Conversation API. 
+              
 
             </F>}
           />
