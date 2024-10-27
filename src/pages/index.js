@@ -4,12 +4,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { useEffect, useState } from "react"
 const SKILLS = {
   JS : {name: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", rank: 10},
   TYPESCRIPT : {name: "Typescript", href: "https://www.typescriptlang.org/", rank: 10 },
   NODE : {name: "Node.js", href: "https://nodejs.org/en/", rank: 10 },
   REACT : {name: "React", href: "https://reactjs.org/",rank: 10 },
   REACT_NATIVE: {name: "React Native", href: "https://reactnative.dev/",rank: 10 },
+  REMIX: {name: "Remix.run", href: "https://remix.run/",rank: 8 },
   RUST: {name: "Rust", href: "https://www.rust-lang.org/",rank: 9 },
   AWS: {name: "AWS", href: "https://aws.amazon.com/" ,rank: 9},
   DOCKER: {name: "Docker", href: "https://www.docker.com/", rank: 8 },
@@ -149,7 +151,51 @@ const Socials = () => {
 }
 
 
-const IndexPage = () => (
+const SectionAboutMe = () => {
+  const [role, seRole] = useState('be')
+  useEffect(() => {
+    const urlRole = new URL(document.location.href).searchParams.get("role")
+    if (urlRole) {
+      seRole(urlRole)
+    }
+  }, [])
+
+  const customRole = role === "be" 
+    ? <>
+      <P>I'm a full stack developer working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.RUST} /> and <Skl skill={SKILLS.GOLANG} />. I also know <Skl skill={SKILLS.REACT} /> and <Skl skill={SKILLS.REACT_NATIVE} />.</P>
+      <P>I assumed the role of tech leader multiple times, consistently delving into the coding details of our projects and actively leveraging my expertise to ensure their success.</P>      
+      </> 
+    : <>
+      <P>I'm a full stack developer working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.REACT} /> ,<Skl skill={SKILLS.REMIX} /> , <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE} />.</P>
+      <P>I assumed the role of tech leader multiple times, consistently delving into the coding details of our projects and actively leveraging my expertise to ensure their success.</P>      
+      <P>I've also created a a project called <A href="https://mytastytales.com">MyTastyTales</A> using <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE}/>, <Skl skill={SKILLS.POSTGRES} />, <Skl skill={SKILLS.DOCKER} /> and <Skl skill={SKILLS.FLY} />.</P>
+    </>;
+
+  return (
+    <Section title="About Me" >
+      <F>
+        {customRole}
+        <P>I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
+        Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several prominent software companies. More specifically is a REST API providing a multichannel real-time communication.</P>
+        <P>Working at the conversation API I've learned a lot about how to deal with microservices, distributed systems, real-time communication, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
+        <P>This also involved a deep involvement in the infrastructure management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoring tools such as <Skl skill={SKILLS.GRAFANA}/>, <Skl skill={SKILLS.KIBANA}/>, <Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
+        <P>I've also worked with <Skl skill={SKILLS.REACT} />.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. 
+        We typically do This with React.js and we have created the <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >Conversation API React SDK</A>.</P>
+        <P>Over time, my fascination with <Skl skill={SKILLS.RUST} /> has deepened significantly. I've not only integrated it into our workplace 
+        but also actively contributed to the <A href="https://github.com/webrtc-rs/webrtc">Webrtc.rs</A> project.</P>
+
+        <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>   
+      </F>
+    </Section>
+    )
+}
+
+const IndexPage = () => {
+
+  
+  // new URL(document.location.href).searchParams.get("role")
+
+return (
   <Layout>
       <Seo title="Home" />
       <div className="column-left" >
@@ -208,36 +254,7 @@ const IndexPage = () => (
         <SectionSkills className="show_on_print" />
       </div>
       <ColumnCenter>
-        <Section title="About Me" >
-          <F>
-             <P>I'm a full stack developer working mainly in <Skl skill={SKILLS.TYPESCRIPT} />, <Skl skill={SKILLS.RUST} /> and <Skl skill={SKILLS.GOLANG} />. I also know <Skl skill={SKILLS.REACT} /> and <Skl skill={SKILLS.REACT_NATIVE} />.</P>
-            
-            <P>I assumed the role of tech leader multiple times, consistently delving into the coding details of our projects and actively leveraging my expertise to ensure their success.</P>
-            
-            <P>I'm now working on a project called <A href="https://mytastytales.com">MyTastyTales</A> using <Skl skill={SKILLS.REACT_NATIVE} />, <Skl skill={SKILLS.NODE}/>, <Skl skill={SKILLS.POSTGRES} />, <Skl skill={SKILLS.DOCKER} /> and <Skl skill={SKILLS.FLY} />.</P>
-            
-            <P>I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
-            Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several prominent software companies. More specifically is a REST API providing a multichannel real-time communication.</P>
-            <P>Working at the conversation API I've learned a lot about how to deal with microservices, distributed systems, real-time communication, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
-            <P>This also involved a deep involvement in the infrastructure management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoring tools such as <Skl skill={SKILLS.GRAFANA}/>, <Skl skill={SKILLS.KIBANA}/>, <Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
-            <P>I've also worked with <Skl skill={SKILLS.REACT} />.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. 
-            We typically do This with React.js and we have created the <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >Conversation API React SDK</A>.</P>
-            <P>Over time, my fascination with <Skl skill={SKILLS.RUST} /> has deepened significantly. I've not only integrated it into our workplace 
-            but also actively contributed to the <A href="https://github.com/webrtc-rs/webrtc">Webrtc.rs</A> project.</P>
-
-            <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>
-            
-            {/* <P>In my previous job, I primarily worked as a frontend developer, but I also worked as a backender (using JavaScript platforms). </P>
-            
-            <P>I'm interested in  <A href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" >isomorphic javascript</A> and I'm really exited about <A href="https://reactjs.org/">Reactjs</A> framework and the <A href="https://facebook.github.io/flux/">Flux</A> approach.</P>
-            
-            <P>I also love to create web ui, fallowing <A href="https://en.wikipedia.org/wiki/Progressive_enhancement" > progressive enhancement strategy</A> and using the <A href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript">Javascript unobstrusive approach</A>. 
-            That's probably because accessibility, and interoperability with a wild range of browsers was a must in my past work (I did websites who can be viewed from the <A href="https://www.gsmarena.com/blackberry_curve_8310-2050.php" >Blackbarry 8310</A> as from the Iphone).
-            </P>
-            <P>As I told for several years javascript was my main language, but in my "past live" I did some experience with Java and Python.</P> */}
-          </F>
-        </Section>
-        
+        <SectionAboutMe />
         <Section title="Resume" >
           <ResumeLine
             title={<F>Fullstack Developer at <A href="https://tractable.ai" >Tractable.ai</A></F>}
@@ -249,6 +266,7 @@ const IndexPage = () => (
               <A href="https://storybook.js.org/">Storybook</A>.<br />
               My role included setting up a CI/CD pipeline and deploying Storybook on Kubernetes, while closely collaborating with the design 
               team to ensure alignment with the company’s visual language.<br />
+              I was also involved in 2 different projects, based on <A href="https://reactjs.org/">React</A> , <A href="https://remix.run/">Remix</A>, <A href="https://nodejs.org/">Node.js</A>,<A href="https://www.postgresql.org/">Postgres</A> and <A href="https://orm.drizzle.team/">Drizzle</A>. 
               I also structured a <A href="https://turborepo.org/">Turborepo</A> monorepo for streamlined code management.<br />
               Additionally, I contributed to the development of a new flagship product, handling both frontend and backend features and 
               establishing a modular monorepo for unified app architecture.<br />
@@ -414,7 +432,7 @@ const IndexPage = () => (
         
       </ColumnCenter>
   </Layout>
-)
+)};
 
 const SectionLanguages = ({className}) => (<Section title="Languages" className={className} >
 <ResumeLine 
