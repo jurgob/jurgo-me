@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             {children}
           </main>
           <footer className="footer">
-            Updated on February, 2024
+            Updated on October, 2024
           </footer>
         </div>
       </div>
