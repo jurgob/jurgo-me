@@ -118,7 +118,7 @@ const Skills = ({skills})=> {
     <div>
       {/* {skills[0].name} */}
       {skills.reduce((acc, {name, href},idx ) => {
-        return acc.concat(<span className="skill_label"  key={name} >{name} </span>, idx < skills.length - 1 && <span  className="skill_sep" key={name+"sep"} > | </span>)
+        return acc.concat(<span   className="skill_label"  key={name} >{name} </span>, idx < skills.length - 1 && <span  className="skill_sep" key={name+"sep"} > | </span>)
       }, [])}
     </div>
   )
@@ -239,6 +239,29 @@ const IndexPage = () => (
         </Section>
         
         <Section title="Resume" >
+          <ResumeLine
+            title={<F>Fullstack Developer at <A href="https://tractable.ai" >Tractable.ai</A></F>}
+            start="April 2024"
+            desc={<F>
+              At Tractable.ai, I led the design and implementation of a reusable Design System for the company’s three main products using {" "}
+               <A href="https://reactjs.org/">React</A>, <A href="https://www.typescriptlang.org/">TypeScript</A>, 
+              <A href="https://tailwindcss.com/">Tailwind</A>, <A href="https://www.radix-ui.com/">Radix UI</A>, and 
+              <A href="https://storybook.js.org/">Storybook</A>.<br />
+              My role included setting up a CI/CD pipeline and deploying Storybook on Kubernetes, while closely collaborating with the design 
+              team to ensure alignment with the company’s visual language.<br />
+              I also structured a <A href="https://turborepo.org/">Turborepo</A> monorepo for streamlined code management.<br />
+              Additionally, I contributed to the development of a new flagship product, handling both frontend and backend features and 
+              establishing a modular monorepo for unified app architecture.<br />
+              <b>Achievements:</b><br />
+                - Designed and implemented a comprehensive Design System, working closely with design and product teams to ensure alignment with the company’s visual language.<br />
+                - Built a CI/CD pipeline for the Design System and Storybook, deploying Storybook on Kubernetes.<br />
+                - Established a Turborepo monorepo for the Design System to optimize code management.<br />
+                - Created a unified monorepo for the new app, integrating both frontend and backend code in a modular monolith structure.<br />
+                - Led the development and coordination of an entire section for the company’s new flagship product.<br />
+            </F>}
+            />
+            
+          
           <ResumeLine  
             title={<F>Tech Leader at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>)</F>} 
             start=" Jannuary 2018"
