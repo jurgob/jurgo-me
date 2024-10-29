@@ -2,6 +2,53 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { FaMapMarkerAlt, FaPhone, FaAt, FaLink , FaGithub} from 'react-icons/fa';
+
+
+const contactIconStyle = {
+  height: ".8em",
+}
+const Contacts = () => {
+  const contactsList = [{
+    value:"London, UK",
+    name:<FaMapMarkerAlt  style={contactIconStyle} />
+  },
+    {
+      value:"+447479199288",
+      name:<FaPhone  style={contactIconStyle} />
+    },
+    {
+      value:"jurgo.boemo@gmail.com",
+      name:<FaAt  style={contactIconStyle} />,
+    },
+    {
+      value:"https://jurgo.me",
+      name:<FaLink  style={contactIconStyle} />,
+    },
+    {
+      value:"https://casual-programming.com",
+      name:<FaLink  style={contactIconStyle} />,
+    },
+    {
+      value:"https://github.com/jurgob",
+      name:<FaGithub  style={contactIconStyle} />,
+    },
+
+] 
+
+
+  return (
+    <div className="show_on_print" >
+      {contactsList.map(({value, name}) => {
+        return (
+          <span key={name} style={{ fontSize:".8em", display:"inline-block", paddingRight: "15px" }}>
+            <b >{name} </b><span className="text" > {value}</span>
+          </span>
+        )
+      })}
+  </div>
+  )
+}
 
 const Header = ({ siteTitle }) => (
   <>
@@ -22,14 +69,18 @@ const Header = ({ siteTitle }) => (
         </h1>
       </div>
     </header>
-    <section className="header-for-print">
-          <div className="header-for-print-image"  ><StaticImage src="../images/jurgo-icon.png" height="98" width="98" style={{borderRadius:"50px"}} /></div>
-          <div className="header-for-print-texts"  >
-            <h2 className="header-for-print-name">Jurgo Boemo </h2>
-            <h3 className="header-for-print-jobtitle">Fullstack software engineer.</h3>
+    <section className="header-for-print-container">
+          <div className="header-for-print" >
+            <div className="header-for-print-image"  ><StaticImage src="../images/jurgo-icon.png" height="98" width="98" style={{borderRadius:"50px"}} /></div>
+            <div className="header-for-print-texts"  >
+              <h2 className="header-for-print-name">Jurgo Boemo </h2>
+              <h3 className="header-for-print-jobtitle">Fullstack software engineer.</h3>
+            </div>
           </div>
-          
-      </section>
+          <div  className="show_on_print" style={{padding: "5px 10px"}} ><Contacts /></div>
+
+    </section>
+    
   </>
 )
 

@@ -117,12 +117,12 @@ const ColumnCenter = ({children}) => (<div className="column-center"> {children}
 
 const Skills = ({skills})=> {
   return (
-    <div>
+    <span>
       {/* {skills[0].name} */}
       {skills.reduce((acc, {name, href},idx ) => {
         return acc.concat(<span   className="skill_label"  key={name} >{name} </span>, idx < skills.length - 1 && <span  className="skill_sep" key={name+"sep"} > | </span>)
       }, [])}
-    </div>
+    </span>
   )
 }
 
@@ -198,35 +198,9 @@ const IndexPage = () => {
 return (
   <Layout>
       <Seo title="Home" />
-      <div className="column-left" >
-      <Section title="Contacts" className="show_on_print" >
-            {[
-              {
-                value:"+447479199288",
-                name:"Phone"
-              },
-              {
-                value:"jurgo.boemo@gmail.com",
-                name:"Email",
-              },
-              {
-                value:"https://jurgo.me",
-                name:"Website",
-              },
-              {
-                value:"https://casual-programming.com",
-                name:"Blog",
-              },
-          ].map(({value, name}) => {
-              return (
-                <div key={name} className="line">
-                  <b className="label" >{name}:</b><br />
-                  <span className="text" >{value}</span>
-                </div>
-              )
-            })}
-        </Section>
-        <Section title="Socials" className="show_on_print" >
+      {/* <div className="column-left" > */}
+     
+        {/* <Section title="Socials" className="show_on_print" >
             {[
               {
                 href:"https://github.com/jurgob",
@@ -249,13 +223,14 @@ return (
                 </div>
               )
             })}
-        </Section>
-        <SectionLanguages className="show_on_print"  />
-        <SectionSkills className="show_on_print" />
-      </div>
+        </Section> */}
+        {/* <SectionLanguages className="show_on_print"  /> */}
+        {/* <SectionSkills className="show_on_print" /> */}
+      {/* </div> */}
       <ColumnCenter>
         <SectionAboutMe />
-        <Section title="Resume" >
+        <SectionSkills />
+        <Section title="Experience" >
           <ResumeLine
             title={<F>Fullstack Developer at <A href="https://tractable.ai" >Tractable.ai</A></F>}
             start="April 2024"
@@ -277,9 +252,7 @@ return (
                 - Created a unified monorepo for the new app, integrating both frontend and backend code in a modular monolith structure.<br />
                 - Led the development and coordination of an entire section for the company’s new flagship product.<br />
             </F>}
-            />
-            
-          
+            />   
           <ResumeLine  
             title={<F>Tech Leader at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>)</F>} 
             start=" Jannuary 2018"
@@ -363,7 +336,7 @@ return (
             end="August 2006"
           />
         </Section>
-        <Section title="My Projects" className="break_inside_avoid" >
+        <Section title="My Projects" className="break_inside_avoid hide_on_print" >
           <ProjectLine title="Conversation API functions" href="https://github.com/jurgob/conversation-api-function" skills={[SKILLS.JS, SKILLS.NODE]} >
             <F>A cli tool that will allow you to write simple application for the Vonage <A href="https://developer.nexmo.com/conversation">Conversation API</A> in your local env with minimal configuration. (I wrote an article about it <A href="https://casual-programming.com/an-easy-way-to-try-vonage-communication-api-locally/">here</A>) </F>
           </ProjectLine>
@@ -378,7 +351,7 @@ return (
           </ProjectLine>
         </Section>
         
-        <Section title="Projects I've Contributed To" >
+        <Section title="Projects I've Contributed To" className="break_inside_avoid" >
           <ProjectLine title="Conversation API" href="https://developer.nexmo.com/api/conversation" 
             skills={[SKILLS.JS,SKILLS.NODE, SKILLS.COUCHBASE, SKILLS.SOCKETIO, SKILLS.DISTRIBUTED, SKILLS.WEBRTC]} 
           >

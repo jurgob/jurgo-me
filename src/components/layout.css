@@ -657,6 +657,9 @@ pre tt:after {
   font-size: 0.7em;
   padding-top: 1.2em;
 }
+.header-for-print-container{
+  display: none;
+}
 .header-for-print {
   display: none;
 }
@@ -670,7 +673,7 @@ pre tt:after {
 a {
   text-decoration: none; 
   font-size: 0.9em;
-  color: #A14234; 
+  color: rgb(192, 91, 77); 
 }
 
 .project_skill_label {
@@ -684,7 +687,8 @@ a {
 
 
 
-@media print  {
+@media print {
+
   .section {
     margin-bottom: .5em;
     padding-bottom: .5em;
@@ -711,12 +715,12 @@ a {
   }
   
   .column-left {
-    display:table-cell;
-    width: 200px;
+    display:hide;
+    /* width: 200px;
     background-color:rgb(32, 32, 32); 
     color: white;
     padding-left: 0.5em;
-    padding-top: 1em;
+    padding-top: 1em; */
   }
 
   .column-left h2{
@@ -738,29 +742,33 @@ a {
   .header {      
     position: absolute;
   }
-  .header-for-print {
-    display:table;
+  .header-for-print-container {
+    display: block;
     background-color: rgb(32, 32, 32) ;
     color: white;
     padding: 0.3em;
     width: 100%;
-    
+  }
+  .header-for-print {
+    display:table;
   }
   .header-for-print-name {
     font-size: 1.5em;
+    line-height: 2em;
     width: 100%;
   }
 
   .header-for-print-jobtitle {
     font-size: 1.1em;
+    line-height: 0em;
   }
   .header-for-print-image {
     display:table-cell;
-    width: 210px;
-
+    width: 110px;
   }
   .header-for-print-texts {
     display:table-cell;
+    vertical-align: middle;
     /* width: 100%; */
     text-align: left;
   }
@@ -788,7 +796,7 @@ a {
     display: none;
   }
   .skill_label {
-    display: block;
+    /* display: block; */
     padding-bottom: .5em;
   }
 
