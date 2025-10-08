@@ -175,15 +175,17 @@ const SectionAboutMe = () => {
     <Section title="About Me" >
       <F>
         {customRole}
-        <P>I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
+        <P>In the last few years, I’ve gone back to being hands-on, joining the startup scene in companies like <A href="https://tractable.ai">Tractable.ai</A> and <A href="https://www.relaytech.co/">RelayTech</A>.</P>
+        <P>Before that, I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
         Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several prominent software companies. More specifically is a REST API providing a multichannel real-time communication.</P>
         <P>Working at the conversation API I've learned a lot about how to deal with microservices, distributed systems, real-time communication, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
-        <P>This also involved a deep involvement in the infrastructure management, using <Skl skill={SKILLS.AWS}/>, <Skl skill={SKILLS.NOMAD}/>, <Skl skill={SKILLS.KUBERNETES}/>,<Skl skill={SKILLS.DOCKER}/> and monitoring tools such as <Skl skill={SKILLS.GRAFANA}/>, <Skl skill={SKILLS.KIBANA}/>, <Skl skill={SKILLS.ELASTICSEARCH}/> and <Skl skill={SKILLS.PROMETHEUS}/>.</P>
-        <P>I've also worked with <Skl skill={SKILLS.REACT} />.  A crucial aspect of my job is developing demo apps to showcase the potential of the Conversation API. 
-        We typically do This with React.js and we have created the <A href="https://github.com/jurgob/reference-client_sdk-ios-android-js-node-deno-usecases/tree/main/packages/client-sdk-react" >Conversation API React SDK</A>.</P>
+        <P>I’m probably not the typical Full Stack Developer who just does “a bit of everything.”<br/>
+        In almost 20 years of experience, I’ve founded my own startup and helped build some of the largest websites in the world — including MTA, Royal Mail, and Aetna.<br />
+        Over the years, I’ve worked across the entire stack: from front-end projects like creating design systems and React SDKs for chat and calls, to deep back-end projects such as real-time SaaS APIs used by companies like Twitter, Telegram, and ByteDance.<br />
+        I’ve also been on-call for over 14 years, supporting production systems and learning what it truly means to build reliable, scalable software. <br />
+        That’s because, rather than chasing job titles or specific skills, I chase interesting people and challenging problems.</P>
         <P>Over time, my fascination with <Skl skill={SKILLS.RUST} /> has deepened significantly. I've not only integrated it into our workplace 
         but also actively contributed to the <A href="https://github.com/webrtc-rs/webrtc">Webrtc.rs</A> project.</P>
-
         <P>I occasionally write about software-related topics in my tech blog, <A href="https://casual-programming.com/">Casual Programming</A>.</P>   
       </F>
     </Section>
@@ -232,8 +234,20 @@ return (
         <SectionSkills />
         <Section title="Experience" >
           <ResumeLine
+            title={<F>Fullstack Developer at <A href="https://www.relaytech.co/" >Relaytech</A></F>}
+            start="September 2024"
+            end="Current"
+            desc={<F>
+              At Relay I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
+              <A href="https://www.python.org/">  Python</A>, <A href="https://reactjs.org/">React</A>, and <A href="https://mantine.dev/">Mantine</A> <br/>
+
+              Building and integrating RESTful APIs, managing business logic, and working with <A href="https://www.postgresql.org/">Postgres</A>, <A href="https://redis.io/">Redis</A>, and <A href="https://kafka.apache.org/">Kafka</A> for data persistence, caching, and event-driven communication
+            </F>}
+            />  
+          <ResumeLine
             title={<F>Fullstack Developer at <A href="https://tractable.ai" >Tractable.ai</A></F>}
             start="April 2024"
+            end="September 2024"
             desc={<F>
               At Tractable.ai, I led the design and implementation of a reusable Design System for the company’s three main products using {" "}
                <A href="https://reactjs.org/">React</A>, <A href="https://www.typescriptlang.org/">TypeScript</A>, 
