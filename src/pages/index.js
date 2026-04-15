@@ -234,8 +234,36 @@ return (
         <SectionSkills />
         <Section title="Experience" >
           <ResumeLine
+            title={<F>Fullstack Developer at <A href="https://www.grantify.io/" >Grantify</A></F>}
+            start="September 2025"
+            end="Current"
+            desc={<F>
+              Designing, developing, and maintaining full-stack features for the funding platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
+              <Skl skill={SKILLS.REACT} /> and serverless architectures on AWS <br/>
+
+              Building backend services with AWS Lambda (TypeScript) and contributing to frontend development in React <br/>
+
+              Introducing <Skl skill={SKILLS.TURBO} /> into an existing Python/TypeScript monorepo to improve build performance and developer experience <br/>
+
+              Enhancing system observability by integrating <A href="https://aws.amazon.com/cloudwatch/">CloudWatch</A> and <A href="https://grafana.com/">Grafana</A> for monitoring and logging <br/>
+
+              Contributing to infrastructure and operations using <A href="https://aws.amazon.com/cdk/">AWS CDK</A> (TypeScript)
+            </F>}
+          />
+        <ResumeLine
+            title={<F>Fullstack Developer at <A href="https://www.relaytech.co/" >Grantify</A></F>}
+            start="September 2025"
+            end="Current"
+            desc={<F>
+              At Grantify I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
+              <A href="https://www.python.org/">  Python</A>, <A href="https://reactjs.org/">React</A>, and <A href="https://mantine.dev/">Mantine</A> <br/>
+
+              Building and integrating RESTful APIs, managing business logic, and working with <A href="https://www.postgresql.org/">Postgres</A>, <A href="https://redis.io/">Redis</A>, and <A href="https://kafka.apache.org/">Kafka</A> for data persistence, caching, and event-driven communication
+            </F>}
+            />  
+          <ResumeLine
             title={<F>Fullstack Developer at <A href="https://www.relaytech.co/" >Relaytech</A></F>}
-            start="September 2024"
+            start="September 2025"
             end="Current"
             desc={<F>
               At Relay I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
@@ -246,7 +274,7 @@ return (
             />  
           <ResumeLine
             title={<F>Fullstack Developer at <A href="https://tractable.ai" >Tractable.ai</A></F>}
-            start="April 2024"
+            start="April 2025"
             end="September 2024"
             desc={<F>
               At Tractable.ai, I led the design and implementation of a reusable Design System for the company’s three main products using {" "}
