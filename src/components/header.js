@@ -67,11 +67,12 @@ const Header = ({ siteTitle }) => (
             <StaticImage src="../images/jurgo-icon.png" height="38" width="38"/> <div style={{display:"inline-block", marginTop:"8px"}} >{siteTitle}</div>
           </Link>
         </h1>
+        <a className="download-cv-button" href="/cv.pdf" download="Jurgo-Boemo-CV.pdf" >Download CV</a>
       </div>
     </header>
     <section className="header-for-print-container">
           <div className="header-for-print" >
-            <div className="header-for-print-image"  ><StaticImage src="../images/jurgo-icon.png" height="98" width="98" style={{borderRadius:"50px"}} /></div>
+            <div className="header-for-print-image"  ><StaticImage src="../images/jurgo-icon.png" height="98" width="98" style={{borderRadius:"50px"}} loading="eager" /></div>
             <div className="header-for-print-texts"  >
               <h2 className="header-for-print-name">Jurgo Boemo </h2>
               <h3 className="header-for-print-jobtitle">Fullstack software engineer.</h3>

@@ -604,10 +604,29 @@ pre tt:after {
   width: 100%;  
 }
 
-.header__inner {        
+.header__inner {
   margin: 0 auto;
   padding: 0.3em 0.5em 0.5em 0.5em;
-  max-width: 980px      
+  max-width: 980px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.download-cv-button {
+  display: inline-block;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 0.4em 0.9em;
+  font-size: 0.8em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.download-cv-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
 }
 
 .main-content {
@@ -744,7 +763,7 @@ a {
   }
   .header-for-print-container {
     display: block;
-    background-color: rgb(32, 32, 32) ;
+    background-color: #000;
     color: white;
     padding: 0.3em;
     width: 100%;

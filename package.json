@@ -23,7 +23,8 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "prettier": "2.3.2"
+    "prettier": "2.3.2",
+    "puppeteer": "^19.7.2"
   },
   "keywords": [
     "gatsby"
@@ -37,8 +38,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "cv": "node gen-cv.js"
+    "deploy": "gatsby build --prefix-paths && node scripts/generate-cv-pdf.js && gh-pages -d public",
+    "cv": "node gen-cv.js",
+    "cv:pdf": "gatsby build && node scripts/generate-cv-pdf.js"
   },
   "repository": {
     "type": "git",
