@@ -175,7 +175,7 @@ const SectionAboutMe = () => {
     <Section title="About Me" >
       <F>
         {customRole}
-        <P>In the last few years, I’ve gone back to being hands-on, joining the startup scene in companies like <A href="https://tractable.ai">Tractable.ai</A> and <A href="https://www.relaytech.co/">RelayTech</A>.</P>
+        <P>In the last few years, I’ve gone back to being hands-on, joining the startup scene in companies like <A href="https://www.grantify.io/" >Grantify</A>, <A href="https://tractable.ai">Tractable.ai</A> and <A href="https://www.relaytech.co/">RelayTech</A>.</P>
         <P>Before that, I worked for 8 years at <A href="https://www.vonage.co.uk/" >Vonage</A> (part of <A href="https://www.ericsson.com/" >Ericsson</A>), 
         Developing the  <A href="https://www.vonage.co.uk/communications-apis/conversation/">Conversation API</A>  which is a SAAS software used by several prominent software companies. More specifically is a REST API providing a multichannel real-time communication.</P>
         <P>Working at the conversation API I've learned a lot about how to deal with microservices, distributed systems, real-time communication, multi master db's like <A href="https://www.couchbase.com/">Couchbase</A> and the <Skl skill={SKILLS.WEBRTC} /> standard.</P>
@@ -235,7 +235,7 @@ return (
         <Section title="Experience" >
           <ResumeLine
             title={<F>Fullstack Developer at <A href="https://www.grantify.io/" >Grantify</A></F>}
-            start="September 2025"
+            start="November 2025"
             end="Current"
             desc={<F>
               Designing, developing, and maintaining full-stack features for the funding platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
@@ -251,23 +251,12 @@ return (
             </F>}
           />
         <ResumeLine
-            title={<F>Fullstack Developer at <A href="https://www.relaytech.co/" >Grantify</A></F>}
-            start="September 2025"
-            end="Current"
-            desc={<F>
-              At Grantify I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
-              <A href="https://www.python.org/">  Python</A>, <A href="https://reactjs.org/">React</A>, and <A href="https://mantine.dev/">Mantine</A> <br/>
-
-              Building and integrating RESTful APIs, managing business logic, and working with <A href="https://www.postgresql.org/">Postgres</A>, <A href="https://redis.io/">Redis</A>, and <A href="https://kafka.apache.org/">Kafka</A> for data persistence, caching, and event-driven communication
-            </F>}
-            />  
-          <ResumeLine
             title={<F>Fullstack Developer at <A href="https://www.relaytech.co/" >Relaytech</A></F>}
             start="September 2025"
-            end="Current"
+            end="November 2025"
             desc={<F>
-              At Relay I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
-              <A href="https://www.python.org/">  Python</A>, <A href="https://reactjs.org/">React</A>, and <A href="https://mantine.dev/">Mantine</A> <br/>
+              At Relaytech I've Designing, developing, and maintaining full-stack features for the e-commerce delivery platform using <A href="https://www.typescriptlang.org/">TypeScript</A>, 
+              <A href="https://www.python.org/">  Python</A>, <Skl skill={SKILLS.REACT} />, and <A href="https://mantine.dev/">Mantine</A> <br/>
 
               Building and integrating RESTful APIs, managing business logic, and working with <A href="https://www.postgresql.org/">Postgres</A>, <A href="https://redis.io/">Redis</A>, and <A href="https://kafka.apache.org/">Kafka</A> for data persistence, caching, and event-driven communication
             </F>}
